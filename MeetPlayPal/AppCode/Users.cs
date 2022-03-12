@@ -17,9 +17,9 @@ namespace MeetPlayPal
         public string LastName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-        public bool IsPublisher { get; set; }
-        public bool IsOwner { get; set; }
-        public bool IsWebUser { get; set; }
+        //public bool IsPublisher { get; set; }
+        //public bool IsOwner { get; set; }
+        //public bool IsWebUser { get; set; }
         //public string ScriptId { get; set; }
         public System.DateTime CreatedDateTime { get; set; }
         public System.DateTime ModifiedDateTime { get; set; }
@@ -65,8 +65,8 @@ namespace MeetPlayPal
             SqlParameter ParamLastName = Cmd.Parameters.Add("@LastName", SqlDbType.VarChar);
             SqlParameter ParamPassword = Cmd.Parameters.Add("@Password", SqlDbType.VarChar);
             SqlParameter ParamEmail = Cmd.Parameters.Add("@Email", SqlDbType.VarChar);
-            SqlParameter ParamIsPublisher = Cmd.Parameters.Add("@IsPublisher", SqlDbType.Bit);
-            SqlParameter ParamIsWebUser = Cmd.Parameters.Add("@IsWebUser", SqlDbType.VarChar);
+            //SqlParameter ParamIsPublisher = Cmd.Parameters.Add("@IsPublisher", SqlDbType.Bit);
+            //SqlParameter ParamIsWebUser = Cmd.Parameters.Add("@IsWebUser", SqlDbType.VarChar);
             SqlParameter ParamStatus = Cmd.Parameters.Add("@Status", SqlDbType.VarChar);
             SqlParameter ParamCreatedDateTime = Cmd.Parameters.Add("@CreatedDateTime", SqlDbType.DateTime);
             SqlParameter ParamModifiedDateTime = Cmd.Parameters.Add("@ModifiedDateTime", SqlDbType.DateTime);
@@ -84,10 +84,10 @@ namespace MeetPlayPal
             ParamEmail.Value = Email;
             ParamEmail.Direction = ParameterDirection.Input;
 
-            ParamIsPublisher.Value = IsPublisher;
-            ParamIsPublisher.Direction = ParameterDirection.Input;
-            ParamIsWebUser.Value = IsWebUser;
-            ParamIsWebUser.Direction = ParameterDirection.Input;
+            //ParamIsPublisher.Value = IsPublisher;
+            //ParamIsPublisher.Direction = ParameterDirection.Input;
+            //ParamIsWebUser.Value = IsWebUser;
+            //ParamIsWebUser.Direction = ParameterDirection.Input;
             //ParamDomainName.Value = DomainName;
             //ParamDomainName.Direction = ParameterDirection.Input;
             ParamStatus.Value = Status;
@@ -149,18 +149,18 @@ namespace MeetPlayPal
                 _user.FirstName = dt.Rows[i]["FirstName"].ToString();
                 _user.LastName = dt.Rows[i]["LastName"].ToString();
 
-                if (dt.Rows[i]["IsPublisher"] == null)
-                    _user.IsPublisher = false;
-                else
-                _user.IsPublisher = bool.Parse(dt.Rows[i]["IsPublisher"].ToString());
+                //if (dt.Rows[i]["IsPublisher"] == null)
+                //    _user.IsPublisher = false;
+                //else
+                //_user.IsPublisher = bool.Parse(dt.Rows[i]["IsPublisher"].ToString());
 
-                if (_user.IsPublisher)
-                {
-                    if (dt.Rows[i]["IsOwner"] == null)
-                        _user.IsOwner = false;
-                    else
-                        _user.IsOwner = bool.Parse(dt.Rows[i]["IsOwner"].ToString());
-                }
+                //if (_user.IsPublisher)
+                //{
+                //    if (dt.Rows[i]["IsOwner"] == null)
+                //        _user.IsOwner = false;
+                //    else
+                //        _user.IsOwner = bool.Parse(dt.Rows[i]["IsOwner"].ToString());
+                //}
             }
 
             return _user;
@@ -175,7 +175,7 @@ namespace MeetPlayPal
             user.Email = strEmail.Trim();
             user.FirstName = strFirstName.Trim();
             user.LastName = strLastName;
-            user.IsPublisher = IsPublisher;
+            //user.IsPublisher = IsPublisher;
             user.OptionID = 1;
             user.CreatedDateTime = DateTime.Now;
             user.CreateUsers(ref dblUserID);
