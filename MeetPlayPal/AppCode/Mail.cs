@@ -133,17 +133,17 @@ namespace MeetPlayPal
                 MlMessage.Attachments.Add(SourceFileAttachment);
             }
 
-            SmtpClient SMTPClnt = new SmtpClient("mail.booqmarqs.com", 25);
-            //SMTPClnt.Host = "mail.booqmarqs.com";
+            SmtpClient SMTPClnt = new SmtpClient("mail.meetplaypal.com", 25);
+            //SMTPClnt.Host = "mail.meetplaypal.com";
             //SMTPClnt.Port = 26;
             //SMTPClnt.EnableSsl = false;
             //SMTPClnt.UseDefaultCredentials = false;
             //SMTPClnt.DeliveryMethod = SmtpDeliveryMethod.Network;
-            SMTPClnt.Credentials = new System.Net.NetworkCredential("admin@booqmarqs.com", "Shamu@123");
+            SMTPClnt.Credentials = new System.Net.NetworkCredential("support@meetplaypal.com", "Shamu@123");
             try
             {
-                //if(!MlMessage.To.ToString().Contains("booqmarqs.com") &&
-                //    !MlMessage.From.ToString().Contains("booqmarqs.com"))
+                //if(!MlMessage.To.ToString().Contains("meetplaypal.com") &&
+                //    !MlMessage.From.ToString().Contains("meetplaypal.com"))
                 SMTPClnt.Send(MlMessage);
 
             }

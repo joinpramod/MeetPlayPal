@@ -282,9 +282,9 @@ namespace MeetPlayPal
                     strBody += " Stack Trace -- " + ex.StackTrace + " <br /><br />";
 
                 mail.Body = strBody;
-                mail.FromAdd = "admin@booqmarqs.com";
+                mail.FromAdd = "support@meetplaypal.com";
                 mail.Subject = "Error";
-                mail.ToAdd = "admin@booqmarqs.com";
+                mail.ToAdd = "support@meetplaypal.com";
                 mail.IsBodyHtml = true;
                 mail.SendMail();
 
@@ -301,9 +301,9 @@ namespace MeetPlayPal
             Mail mail = new Mail();
             string strBody = txt;
             mail.Body = strBody;
-            mail.FromAdd = "admin@booqmarqs.com";
+            mail.FromAdd = "support@meetplaypal.com";
             mail.Subject = "Error";
-            mail.ToAdd = "admin@booqmarqs.com";
+            mail.ToAdd = "support@meetplaypal.com";
             mail.IsBodyHtml = true;
             mail.SendMail();
 
