@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetPlayPal", "WebApplication1\MeetPlayPal.csproj", "{243E4ADD-66AA-45D1-9D67-15DE56A8B680}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetPlayPal", "MeetPlayPal\MeetPlayPal.csproj", "{243E4ADD-66AA-45D1-9D67-15DE56A8B680}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
