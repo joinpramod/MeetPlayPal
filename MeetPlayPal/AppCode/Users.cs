@@ -28,7 +28,6 @@ namespace MeetPlayPal
         //public string Details { get; set; }
         //public string Address { get; set; }
         public string Status { get; set; }
-        public List<Domain> Domains { get; set; }
 
         public bool CreateUsers(ref double NewMasterID)
         {
