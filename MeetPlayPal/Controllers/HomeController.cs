@@ -69,11 +69,11 @@ namespace MeetPlayPal.Controllers
                     mail.IsBodyHtml = true;
                     //mail.Body = txtSuggestion + " from " + txtEMail;
                     //if (Session["User"] != null)
-                    mail.FromAdd = "admin@booqmarqs.com";
+                    mail.FromAdd = "admin@MeetPlayPal.com";
                     // else
                     // mail.FromAdd = txtEMail;
                     mail.Subject = "Suggestion - " + txtSubject;
-                    mail.ToAdd = "admin@booqmarqs.com";
+                    mail.ToAdd = "admin@MeetPlayPal.com";
 
                     mail.SendMail();
                     ViewBag.Ack = "Thanks for your time in reaching out to us, we will get back to you soon if needed.";
@@ -158,9 +158,9 @@ namespace MeetPlayPal.Controllers
             //}
 
             //mail.Body = strBody;
-            //mail.FromAdd = "admin@booqmarqs.com";
+            //mail.FromAdd = "admin@MeetPlayPal.com";
             //mail.Subject = "Not Found";
-            //mail.ToAdd = "admin@booqmarqs.com";
+            //mail.ToAdd = "admin@MeetPlayPal.com";
             //mail.IsBodyHtml = true;
             //mail.SendMail();         
         

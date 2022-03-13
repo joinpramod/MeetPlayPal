@@ -113,7 +113,7 @@ namespace MeetPlayPal.Controllers
                 //user.Details = DtUserList.Rows[0]["Details"].ToString();
                 Session["User"] = user;
                 
-                HttpCookie userCookie = new HttpCookie("BooqmarqsLogin");
+                HttpCookie userCookie = new HttpCookie("MeetPlayPalLogin");
                 userCookie.Values["EMail"] = user.Email;
                 userCookie.Expires = System.DateTime.Now.AddDays(180);
                 Response.Cookies.Add(userCookie);
@@ -193,9 +193,9 @@ namespace MeetPlayPal.Controllers
             Session.RemoveAll();
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
 
-            if (Request.Cookies["BooqmarqsLogin"] != null)
+            if (Request.Cookies["MeetPlayPalLogin"] != null)
             {
-                HttpCookie myCookie = Request.Cookies["BooqmarqsLogin"];
+                HttpCookie myCookie = Request.Cookies["MeetPlayPalLogin"];
                 myCookie.Expires = DateTime.Now.AddDays(-1d);
                 myCookie.Values["UserId"] = null;
                 myCookie.Values["FirstName"] = null;
@@ -440,9 +440,9 @@ namespace MeetPlayPal.Controllers
                     Mail mail = new Mail();
                     mail.IsBodyHtml = true;
                     string EMailBody = System.IO.File.ReadAllText(Server.MapPath("../EMailBody.txt"));
-                    mail.Body = string.Format(EMailBody, "Forgot Password", "Your Booqmarqs account password is " + dtUser.Rows[0]["Password"].ToString());
-                    mail.FromAdd = "admin@booqmarqs.com";
-                    mail.Subject = "Booqmarqs account password";
+                    mail.Body = string.Format(EMailBody, "Forgot Password", "Your MeetPlayPal account password is " + dtUser.Rows[0]["Password"].ToString());
+                    mail.FromAdd = "admin@MeetPlayPal.com";
+                    mail.Subject = "MeetPlayPal account password";
                     mail.ToAdd = dtUser.Rows[0]["EMail"].ToString();
                     mail.SendMail();
 
@@ -497,10 +497,10 @@ namespace MeetPlayPal.Controllers
                 }
 
                 mail.Body = strBody;
-                mail.FromAdd = "admin@booqmarqs.com";
+                mail.FromAdd = "admin@MeetPlayPal.com";
                 mail.Subject = "New User registered";
 
-                mail.ToAdd = "admin@booqmarqs.com";
+                mail.ToAdd = "admin@MeetPlayPal.com";
                 mail.IsBodyHtml = true;
                 mail.SendMail();
             }
@@ -517,10 +517,10 @@ namespace MeetPlayPal.Controllers
             {
                 Mail mail = new Mail();
                 string EMailBody = System.IO.File.ReadAllText(Server.MapPath("../EMailBody.txt"));
-                string strCA = "<a id=HyperLink1 style=font-size: medium; font-weight: bold; color:White href=http://Booqmarqs.com>Booqmarqs</a>";
-                mail.Body = string.Format(EMailBody, "New User Register", "Welcome to " + strCA + ". Start using the new way of Booqmarqs and feel the difference.");
-                mail.FromAdd = "admin@booqmarqs.com";
-                mail.Subject = "Welcome to Booqmarqs";
+                string strCA = "<a id=HyperLink1 style=font-size: medium; font-weight: bold; color:White href=http://MeetPlayPal.com>MeetPlayPal</a>";
+                mail.Body = string.Format(EMailBody, "New User Register", "Welcome to " + strCA + ". Start using the new way of MeetPlayPal and feel the difference.");
+                mail.FromAdd = "admin@MeetPlayPal.com";
+                mail.Subject = "Welcome to MeetPlayPal";
                 mail.ToAdd = email;
                 mail.IsBodyHtml = true;
                 mail.SendMail();
@@ -538,11 +538,11 @@ namespace MeetPlayPal.Controllers
             {
                 Mail mail = new Mail();
                 string EMailBody = System.IO.File.ReadAllText(Server.MapPath("../EMailBody.txt"));
-                string strActLink = "http://booqmarqs.com/Account/Activate/?ActivationCode=" + ActivationCode;
-                string strCA = "<a id=HyperLink1 style=font-size: medium; font-weight: bold; color:White href=http://booqmarqs.com>Booqmarqs</a>";
-                mail.Body = string.Format(EMailBody, "User Activation", "Welcome to " + strCA + ". Activate your account and start using the new way of Booqmarqs and feel the difference.<br/> <br/>Please click <a id=actHere href=http://booqmarqs.com/Account/Activate/?ActivationCode=" + ActivationCode + ">" + strActLink + "</a> to activate your account");
-                mail.FromAdd = "admin@booqmarqs.com";
-                mail.Subject = "Welcome to Booqmarqs";
+                string strActLink = "http://MeetPlayPal.com/Account/Activate/?ActivationCode=" + ActivationCode;
+                string strCA = "<a id=HyperLink1 style=font-size: medium; font-weight: bold; color:White href=http://MeetPlayPal.com>MeetPlayPal</a>";
+                mail.Body = string.Format(EMailBody, "User Activation", "Welcome to " + strCA + ". Activate your account and start using the new way of MeetPlayPal and feel the difference.<br/> <br/>Please click <a id=actHere href=http://MeetPlayPal.com/Account/Activate/?ActivationCode=" + ActivationCode + ">" + strActLink + "</a> to activate your account");
+                mail.FromAdd = "admin@MeetPlayPal.com";
+                mail.Subject = "Welcome to MeetPlayPal";
                 mail.ToAdd = email;
                 mail.IsBodyHtml = true;
                 mail.SendMail();
@@ -689,7 +689,7 @@ namespace MeetPlayPal.Controllers
 
 
                 Session["User"] = user1;
-                HttpCookie mycookie = new HttpCookie("BooqmarqsLogin");
+                HttpCookie mycookie = new HttpCookie("MeetPlayPalLogin");
                 mycookie.Values["EMail"] = user1.Email;
                 mycookie.Expires = System.DateTime.Now.AddDays(180);
                 Response.Cookies.Add(mycookie);
@@ -762,11 +762,11 @@ namespace MeetPlayPal.Controllers
             {
                 if (Request.Browser.Type.ToLower().Contains("chrome"))
                 {
-                    return Redirect("https://chrome.google.com/webstore/detail/booqmarqs/nabhjndfpicfhnminejhekphlfdaojla");
+                    return Redirect("https://chrome.google.com/webstore/detail/MeetPlayPal/nabhjndfpicfhnminejhekphlfdaojla");
                 }
                 else if (Request.Browser.Type.ToLower().Contains("firefox"))
                 {
-                    return Redirect("https://addons.mozilla.org/en-US/firefox/addon/booqmarqs/");
+                    return Redirect("https://addons.mozilla.org/en-US/firefox/addon/MeetPlayPal/");
                 }
                 else
                 {
@@ -798,7 +798,7 @@ namespace MeetPlayPal.Controllers
 
 
                 Session["User"] = user1;
-                HttpCookie mycookie = new HttpCookie("BooqmarqsLogin");
+                HttpCookie mycookie = new HttpCookie("MeetPlayPalLogin");
                 mycookie.Values["EMail"] = user1.Email;
                 mycookie.Expires = System.DateTime.Now.AddDays(180);
                 Response.Cookies.Add(mycookie);
@@ -807,11 +807,11 @@ namespace MeetPlayPal.Controllers
                 {  
                     if(Request.Browser.Type.ToLower().Contains("chrome"))
                     {                        
-                        return Redirect("https://chrome.google.com/webstore/detail/booqmarqs/nabhjndfpicfhnminejhekphlfdaojla");
+                        return Redirect("https://chrome.google.com/webstore/detail/MeetPlayPal/nabhjndfpicfhnminejhekphlfdaojla");
                     }
                     else if (Request.Browser.Type.ToLower().Contains("firefox"))
                     {
-                        return Redirect("https://addons.mozilla.org/en-US/firefox/addon/booqmarqs/");
+                        return Redirect("https://addons.mozilla.org/en-US/firefox/addon/MeetPlayPal/");
                     }
                     else
                     {
@@ -849,11 +849,11 @@ namespace MeetPlayPal.Controllers
             {
                 if (Request.Browser.Type.ToLower().Contains("chrome"))
                 {
-                    return Redirect("https://chrome.google.com/webstore/detail/booqmarqs/nabhjndfpicfhnminejhekphlfdaojla");
+                    return Redirect("https://chrome.google.com/webstore/detail/MeetPlayPal/nabhjndfpicfhnminejhekphlfdaojla");
                 }
                 else if (Request.Browser.Type.ToLower().Contains("firefox"))
                 {
-                    return Redirect("https://addons.mozilla.org/en-US/firefox/addon/booqmarqs/");
+                    return Redirect("https://addons.mozilla.org/en-US/firefox/addon/MeetPlayPal/");
                 }
                 else
                 {
@@ -889,7 +889,7 @@ namespace MeetPlayPal.Controllers
 
 
                 Session["User"] = user1;
-                HttpCookie mycookie = new HttpCookie("BooqmarqsLogin");
+                HttpCookie mycookie = new HttpCookie("MeetPlayPalLogin");
                 mycookie.Values["EMail"] = user1.Email;
                 mycookie.Expires = System.DateTime.Now.AddDays(180);
                 Response.Cookies.Add(mycookie);
@@ -898,11 +898,11 @@ namespace MeetPlayPal.Controllers
                 {
                     if (Request.Browser.Type.ToLower().Contains("chrome"))
                     {
-                        return Redirect("https://chrome.google.com/webstore/detail/booqmarqs/nabhjndfpicfhnminejhekphlfdaojla");
+                        return Redirect("https://chrome.google.com/webstore/detail/MeetPlayPal/nabhjndfpicfhnminejhekphlfdaojla");
                     }
                     else if (Request.Browser.Type.ToLower().Contains("firefox"))
                     {
-                        return Redirect("https://addons.mozilla.org/en-US/firefox/addon/booqmarqs/");
+                        return Redirect("https://addons.mozilla.org/en-US/firefox/addon/MeetPlayPal/");
                     }
                     else
                     {

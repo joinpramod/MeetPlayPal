@@ -20,9 +20,9 @@ namespace MeetPlayPal.Controllers
                     //ViewBag.IsOwner = user.IsOwner;
                     RedirectToProfile(filterContext);
                 }
-                else if (Request.Cookies["BooqmarqsLogin"] != null && Request.Cookies["BooqmarqsLogin"].HasKeys)
+                else if (Request.Cookies["MeetPlayPalLogin"] != null && Request.Cookies["MeetPlayPalLogin"].HasKeys)
                 {
-                    string uname = Request.Cookies["BooqmarqsLogin"].Values["EMail"];
+                    string uname = Request.Cookies["MeetPlayPalLogin"].Values["EMail"];
                     Users user1 = new Users();
                     user1 = user1.GetUser(uname);
                     Session["User"] = user1;
@@ -78,9 +78,9 @@ namespace MeetPlayPal.Controllers
                 Session["bookmark"] = null;
                 Session.RemoveAll();
 
-                if (Request.Cookies["BooqmarqsLogin"] != null)
+                if (Request.Cookies["MeetPlayPalLogin"] != null)
                 {
-                    HttpCookie myCookie = Request.Cookies["BooqmarqsLogin"];
+                    HttpCookie myCookie = Request.Cookies["MeetPlayPalLogin"];
                     myCookie.Expires = DateTime.Now.AddDays(-1d);
                     myCookie.Values["UserId"] = null;
                     myCookie.Values["FirstName"] = null;

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Language" content="en-us" />
+    <meta name="Robots" content="All" />
+    <meta name="application-name" content="MeetPlayPal" />
+    <meta name="keywords" content="Online Bookmarks, online bookmarks manager, save bookmarks online, online favorites, save favorites online, browser extensions, import from  browser ready, free online bookmarks, tree view, increase web traffic, build user base, site value" />
+    <meta name="description" content="Online bookmarks with browser extensions, import from  browser ready, heirarchial tree view, publisher plugins to increase web traffic, site value and build user base">
+    <title>Online bookmarks with browser addon's, import ready, tree view, free of charge, publisher plugins to increase web traffic, site value and build user base</title>
+
+    <link rel="shortcut icon" href="~/images/favicon.png">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="~/Content/themes/base/jquery-ui.min.css" />
+    <link rel="stylesheet" href="~/Content/plugins.min.css">
+    <link rel="stylesheet" href="~/Content/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/responsive.css">
+
+
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/platform.js" async defer type="text/javascript"></script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112287387-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112287387-1');
+    </script>
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="apland-load"></div>        
+    </div>
+
+    @RenderBody()
+         
+  
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/plugins.min.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>

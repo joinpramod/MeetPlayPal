@@ -1,17 +1,188 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Bookmark - ";
+    Layout = "~/Views/Shared/Manage_MeetPlayPal.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+
+
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<script type="text/javascript" src="~/js/JavaScript1.js"></script>
+<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script>
+    function IsRecapchaValid() {
+        var response = grecaptcha.getResponse();
+        if (response.length == 0) {
+            //reCaptcha not verified
+            alert("Please validate the recaptcha");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>
+
+
+
+<section class="pt150 pb100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="page_title_area">
+                    <div class="section_heading">
+                        <h3><span>Contact Us</span> </h3>
+                        <p>For any Queries Get in touch with us</p>
+                    </div>
+                </div>
+
+                <div class="contact_from">
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { onsubmit = "return IsRecapchaValid();" }))
+{
+                            <div class="form_area">
+                            <div class="success_info">You can also email us directly at admin@MeetPlayPal.com</div>
+                                <div class="success_info">@ViewBag.Ack</div>
+                            <div class="error_info">@*Opps somthing went worng please check form and try again!*@</div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            @*<input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>*@
+                                            @Html.TextBox("txtName", "", new { placeholder = "Name", @class = "form-control", required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            @*<input type="email" class="form-control" name="email" id="email" placeholder="Your E-mail" required>*@
+                                            @Html.TextBox("txtEMail", "", new { placeholder = "EMail Id", @class = "form-control", type = "email", required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            @*<input type="text" class="form-control" name="subject" id="subject" placeholder="Your Subject" required>*@
+                                            @Html.TextBox("txtSubject", "", new { placeholder = "Subject", @class = "form-control", required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            @*<input type="number" class="form-control" name="number" id="number" placeholder="Your Number *" required>*@
+                                            @Html.TextBox("txtNumber", "", new { placeholder = "Your Number", @class = "form-control", required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group textarea">
+                                            @*<textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Your Message *" required></textarea>*@
+                                            @Html.TextArea("txtMessage", "", new { placeholder = "Your Message", @class = "form-control", required = "required" })
+                                        </div>
+                                    </div>
+                                   
+                                        <div  style="margin: 0 auto;display: block;padding-top:5px;padding-bottom:10px">
+                                            <div class="g-recaptcha" data-sitekey="6Ld7oD4UAAAAALIOKHkpmTmnbt_JiZohkd6Xjat5"></div>
+                                        </div>
+                                    
+                                    <div class="col-12">
+                                        <button type="submit" class="btn">SEND</button>
+                                    </div>
+                                </div>
+                        </div>
+                        @Html.Hidden("hfUserEMail", (object)ViewBag.UserEMail)
+} 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+@*<div style="height:100px"></div>
+<h2>Contact Us</h2><br />
+<div id="Content">
+
+
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post, new {onsubmit="return IsRecapchaValid();" }))
+{
+   
+                <table style="width:100%;font-size:16px">
+
+                    <tr>
+                        <td align="center">
+                            <span style="font-weight:bold;color:green;font-size:14px">@Html.Raw(ViewBag.Ack)</span>                         
+                        </td>
+                    </tr>
+
+                    
+                     <tr>
+                        <td align="center">
+                            <span style="font-weight:bold;color:darkgreen;font-size:16px">You can also email us directly at contactus@MeetPlayPal.com</span>
+                        </td>
+                    </tr>
+                   
+                    @if(string.IsNullOrEmpty(ViewBag.UserEMail))
+                    {
+                        <tr>
+                            <td align="left" style="width:200px">
+                                @Html.TextBox("txtEMail", "", new { style = "width:40%;height:30px;", placeholder = "EMail Id", @class = "myText" })
+                                <br/>
+                            </td>
+                        </tr>
+                    }
+                   
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td style="">
+                            @Html.TextArea("txtSuggestion", "", new { style = "width:90%;height:200px;", placeholder = "Message", @class = "myText" })
+                        </td>
+                    </tr>
+                     <tr>
+                                    <td align="center">
+                                             <div class="g-recaptcha" data-sitekey="6LfVsxATAAAAADNxqs-kXsBp1GHJMGGiENNpgpLF"></div>
+                                    </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding-left: 40%">
+                            &nbsp;<br />
+                            <input type="submit" value="Submit" id="btnSubmit" onclick="return ValidateSuggestion()" class="mysubmit" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style=" font-size: medium">
+                            <table style="width:100%;">
+                                <tr>
+                                    <td align="left">
+                                        MeetPlayPal
+                                        <br />
+                                        New Jersey,
+                                        <br />
+                                        USA
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" width="150px">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+     @Html.Hidden("hfUserEMail", (object)ViewBag.UserEMail)
+}
+
+</div>*@
+
+
+

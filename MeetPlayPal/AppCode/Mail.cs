@@ -112,7 +112,7 @@ namespace MeetPlayPal
         public string SendMail()
         {
             string ErrDesc = "";
-            MailAddress FrmMailAdd = new MailAddress(StrFromAdd, "Booqmarqs Team");
+            MailAddress FrmMailAdd = new MailAddress(StrFromAdd, "MeetPlayPal Team");
             MlMessage.From = FrmMailAdd;
             MlMessage.To.Add(StrToAdd);
             if (!string.IsNullOrEmpty(StrCCAdds))

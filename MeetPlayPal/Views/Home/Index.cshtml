@@ -1,31 +1,279 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<section class="welcome_slider" id="home">
+    <div class="welcome_slides">
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+        <div class="single_slide text-center" style="background-image: url(../Images/banner1.png);">
+            <div class="table">
+                <div class="table_cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div style="font-size:20px;text-align:left">
+                                    <h2>Online Bookmarks. Easy to use.</h2>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="single_slide text-center" style="background-image: url(../Images/banner2.png);">
+            <div class="table">
+                <div class="table_cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div style="font-size:18px;text-align:left">
+                                    <h2>Build user base and increase traffic <br /> for publishers.  Easy setup.</h2>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Slide Area Start -->
+        <!-- Single Slide Area Start -->
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+</section>
+
+
+<section class="section_padding_50 pb20">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-6 col-lg-8">
+                <div>
+                    <h3>Web User</h3>
+                    <p class="mt20">Save bookmarks online without being dependent on browser or machine.</p>
+
+                    <ul class="fa-ul list-colored mt20">
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i>With our browser extensions experience the similar browser bookmarks toolbar.
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i>Import feature ready to import browser bookmarks.
+                        </li> 
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i>Access bookmarks anytime be it Chrome, Firefox, IE, Safari, Personal or Official laptops or Public machines.
+                        <li>
+                                         
+                    </ul>
+
+
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-4 text-center">
+
+                <img src="~/Images/WebUser.png" alt="">
+
+            </div>
+
+
+        </div>
+        <div class="row section_padding_50">
+
+            <div class="col-12 col-md-6 col-lg-3 text-center">
+
+                <img src="~/Images/SiteOwner.png" alt="Web Publisher">
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-9">
+                <div>
+                    <h3>Web Publisher</h3>
+                    <ul class="fa-ul list-colored mt20">
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i>MeetPlayPal is a way of increasing web traffic, trust, value and to build a good user base.
+                        <li>
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i>One click on MeetPlayPal icon displayed on any website, to save bookmark in MeetPlayPal account.
+                        </li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>Just 2 easy steps to get started.</li>
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i>Full detailed reports about your website bookmarks including the details like URL, user location,
+                            created date and more.
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+</section>
+
+<section class="section_padding_40" id="whattoexpect">
+    <div class="container">
+        <h2 class="text-center text-yelow mb15">What To Expect</h2>
+        <div class="row section_padding_40">
+            <div class="col-12 col-md-6 col-lg-8">
+                <div>
+
+                    <h3>Web User</h3>
+                    <ul class="fa-ul list-colored mt20">
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>Tree view kind of hierarchical folder structure with right click menus to manage all bookmarks.
+                        <li>
+                        @*<li><i class="fa-li fa fa-arrow-circle-o-right"></i> Very easy to use, manage and access.
+                        <li>*@
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i>Import feature in addon's is just 1 click import. Download them today.
+                        <li>
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i>User can use Facebook, Google and Twitter accounts to access bookmarks anytime.
+                        <li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 text-center">
+
+                <img src="~/Images/WhatToExpect.png" alt="What To Expect">
+            </div>
+
+
+
+        </div>
+        <div class="row justify-content-center align-items-center">
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <img src="~/Images/WhatToExpectSite-Owner.png" alt="">
+
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-8">
+                <div class="">
+
+                    <h3>Web Publisher</h3>
+                    <p class="mt20">
+                        Access information about your site bookmarks in the form of reports.
+                        Information included is like:
+                    </p>
+
+                    <ul class="fa-ul list-colored mt20">
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>Total numbers of Bookmarks based on the date</li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>User geographical location based reports </li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>URL based filtering to know which link was bookmarked highest and more this service is absolutely free of cost</li>
+
+                    </ul>
+                    <p class="mt20">Also there are API’s which can be accessed to get your desired data. Please submit a request for API access from Contact Us section.</p>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
+</section>
+
+<section id="howitworks">
+    <div class="container ">
+        <h2 class="text-center text-yelow mb15">How It Works</h2>
+        <div class="row section_padding_40">
+            <div class="col-12 col-md-6 col-lg-6 border-right padding-right-20">
+                <div>
+                    <h3>Web User</h3>
+                    <ul class="fa-ul list-colored mt20">
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>Register to create your MeetPlayPal account.
+                        <li>
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i> Click on MeetPlayPal icon on any webpage and on any website if visible and if you want to
+                            bookmark that webpage.
+                        <li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i> This will be saved in your MeetPlayPal account.
+                        <li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>After being saved a green tick mark on the icon will confirm the action.
+                        <li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>If clicked again then a small window will be presented to edit the bookmark.
+                        <li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>By default bookmarks are saved in Default folder from other websites on 1 click.
+                        <li>
+                            <!--<li>
+                                <i class="fa-li fa fa-arrow-circle-o-right"></i>If you have not logged in to MeetPlayPal then you will be presented with a login screen in a popup
+                                small window.
+                            <li>-->
+                        <li>
+                            <i class="fa-li fa fa-arrow-circle-o-right"></i>Access your bookmarks on MeetPlayPal.com or install our
+                            chrome and firefox extensions made similar to browser bookmark toolbar.
+                        <li>
+                    </ul>
+
+
+                </div>
+                <div class=" text-center">
+                    <img src="~/Images/Web-User-htw.png" alt="Web User">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 padding-left-30">
+                <div>
+                    <h3>Web Publisher</h3>
+                    <ul class="fa-ul list-colored mt20">
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>Register to create your MeetPlayPal account.
+                        <li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>Register your website with the URL and then generate the script by selecting the desired size you need for your website to match.
+                        <li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>Select if bookmarks count needs to be displayed. This will create good impression on users if you have more count.
+                        <li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>Copy and place the script in your web application code where you want the icon to be displayed. As obvious it is recommended that you place it in such a way that it is visible and highlighted to the user.
+                        <li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>It is also recommended that this icon is displayed on every unique URL of your site.
+                        <li>
+                        <li><i class="fa-li fa fa-arrow-circle-o-right"></i>After this just keep checking the reports and analyze the data of your website bookmarks.
+                        <li>
+                    </ul>
+
+
+                </div>
+                <div class=" text-center">
+                    <img src="~/Images/SiteOwner-htw.png" alt="Web Publisher">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <h2 class="text-center text-yelow mb15">Extensions</h2>
+
+        <div class="col-12 col-md-6 col-lg-12">
+            <div class=" text-center">
+                <h3 class="mt20">Download our Chrome and Firefox extensions</h3>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-12 text-center ">
+            <a href="https://chrome.google.com/webstore/detail/MeetPlayPal/nabhjndfpicfhnminejhekphlfdaojla" target="_blank"> <img src="~/Images/chromebtn.png" alt=""></a>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/MeetPlayPal/" target="_blank"> <img src="~/Images/firefoxbtn.png" alt=""></a>
+        </div>
+    </div>
+</section>
+
+<section class="get_started_area section_padding_40">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-5 text-right"><img src="~/images/Get-Started.png" alt=""></div>
+            <div class="col-5 text-left">
+                <!-- Total User Text Start -->
+                <div class="get_started_text" >
+
+                    <a href="@Url.Action("Choice", "Account")" style="height:50px" class="btn btn-lg">Get Started Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

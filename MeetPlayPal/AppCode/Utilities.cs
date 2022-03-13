@@ -315,8 +315,8 @@ namespace MeetPlayPal
         {
             try
             {
-                File.AppendAllText(System.Web.HttpContext.Current.Server.MapPath("~/Logs/Booqmarqs.txt"), DateTime.Now + " --> " + Type + ", " + Method + ",  " + Description + "\n");
-                File.AppendAllText(System.Web.HttpContext.Current.Server.MapPath("~/Logs/Booqmarqs.txt"), " ");
+                File.AppendAllText(System.Web.HttpContext.Current.Server.MapPath("~/Logs/MeetPlayPal.txt"), DateTime.Now + " --> " + Type + ", " + Method + ",  " + Description + "\n");
+                File.AppendAllText(System.Web.HttpContext.Current.Server.MapPath("~/Logs/MeetPlayPal.txt"), " ");
             }
             catch (Exception ex)
             {

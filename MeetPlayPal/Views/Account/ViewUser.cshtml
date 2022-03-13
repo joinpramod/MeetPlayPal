@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "ViewUser";
+    Layout = "~/Views/Shared/_Layout_NoGoogle.cshtml";
+}
+@model Bookmark.Users
+
+
+
+    <div class="container">
+        <div class="span12">
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="section_heading" style="padding-top:20px">
+                        <h3><span>My profile</span> </h3>
+                    </div>
+                    @using (Html.BeginForm("EditUser", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                         <div class="form_search">
+                            <div class="form_area justify-content-center">
+                                <div class="form-group row">
+                                    <div class="col-5 text-right">First Name:</div>                            
+                                    <div class="col-7 text-left">
+                                        <b>@Model.FirstName</b>
+                                    </div>
+                                </div>
+                                <div style="height:10px"></div>
+                                <div class="form-group row">
+                                    <div class="col-5 text-right">Last Name:</div>       
+                                    <div class="col-7 text-left">
+                                        <b>@Model.LastName</b>
+                                    </div>
+                                </div>
+                                <div style="height:10px"></div>
+                                <div class="form-group row">
+                                    <div class="col-5 text-right">EMail Address:</div>       
+                                    <div class="col-7  text-left">
+                                        <b>@Model.Email</b>
+                                    </div>
+                                </div>
+                                <div style="height:10px"></div>
+                                <div class="row justify-content-center">
+
+                                    <div class="col-xs-6">
+                                        <button class="btn btn-block" id="Edit" name="Edit">Edit</button>
+                                    </div>
+                                    @if (string.IsNullOrEmpty(ViewBag.RefType))
+                                    {
+                                        <div class="col-xs-6">
+                                            <button class="btn btn-block" id="ChangePassword" name="ChangePassword" style="width:200px">Change Password</button>
+                                        </div>
+                                    }
+
+                                    </div>
+                                </div>
+                            </div>
+                    } 
+                     @if (ViewBag.IsOwner == null || !ViewBag.IsOwner)
+                     {
+                    <div style="height:40px"></div>    
+                    <div class="row justify-content-center">
+                        If you want to change yourself to a publisher to use MeetPlayPal in your web application, then edit your info and update your profile.
+                        After updating yourself as publisher, go to Script tab to register your domain and generate script to use it in your application.
+                    </div>
+                     }
+            </div>
+            </div>
+        </div>
+        </div>
+
+
