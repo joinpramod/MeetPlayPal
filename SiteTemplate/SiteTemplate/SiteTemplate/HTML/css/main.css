@@ -148,7 +148,7 @@ input:focus,
 			box-shadow:none !important;
 }
 .form-group {
-	z-index: 2;
+	z-index: 0;
 	width: 100%;
 	float: left;
 	margin:0 0 20px;
@@ -1310,7 +1310,7 @@ li.tg-rss a { background:#ff6600; }
 	float: left;
 	min-height: 520px;
 	padding: 100px 0 240px;
-	background: rgba(54, 59, 77, 0.88);
+	/*background: rgba(54, 59, 77, 0.88);*/
 }
 .tg-innerbanner figure figcaption{
 	padding: 40px 0;
