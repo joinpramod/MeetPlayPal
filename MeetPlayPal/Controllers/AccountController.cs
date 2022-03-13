@@ -104,11 +104,11 @@ namespace MeetPlayPal.Controllers
                 user.FirstName = DtUserList.Rows[0]["FirstName"].ToString();
                 user.LastName = DtUserList.Rows[0]["LastName"].ToString();
                 user.Email = DtUserList.Rows[0]["EMail"].ToString();
-                user.IsPublisher = bool.Parse(DtUserList.Rows[0]["IsPublisher"].ToString());
-                if (!string.IsNullOrEmpty(DtUserList.Rows[0]["IsOwner"].ToString()))
-                {
-                    user.IsOwner = bool.Parse(DtUserList.Rows[0]["IsOwner"].ToString());
-                }
+                //user.IsPublisher = bool.Parse(DtUserList.Rows[0]["IsPublisher"].ToString());
+                //if (!string.IsNullOrEmpty(DtUserList.Rows[0]["IsOwner"].ToString()))
+                //{
+                //    user.IsOwner = bool.Parse(DtUserList.Rows[0]["IsOwner"].ToString());
+                //}
 
                 //user.Details = DtUserList.Rows[0]["Details"].ToString();
                 Session["User"] = user;
@@ -126,22 +126,23 @@ namespace MeetPlayPal.Controllers
                     return RedirectToAction("ExtMeetPlayPals", "MeetPlayPal");
                 }
 
-                if (Session["MeetPlayPal"] != null && Request.Form["btnQuickLogin"] != null)
-                {
-                    AddMeetPlayPal(Session["MeetPlayPal"], user.UserId.ToString());
-                    Session["MeetPlayPal"] = null;
-                    return View("../MeetPlayPal/BMAdded");
-                }
-                else if (user.IsOwner)
-                {
-                    Session["SiteOwner"] = null;
-                    ViewBag.IsOwner = true;
-                    return RedirectToAction("Reports", "MeetPlayPal");
-                }
-                else
-                {
-                    return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
-                }
+                //if (Session["MeetPlayPal"] != null && Request.Form["btnQuickLogin"] != null)
+                //{
+                //    AddMeetPlayPal(Session["MeetPlayPal"], user.UserId.ToString());
+                //    Session["MeetPlayPal"] = null;
+                //    return View("../MeetPlayPal/BMAdded");
+                //}
+                //else if (user.IsOwner)
+                //{
+                //    Session["SiteOwner"] = null;
+                //    ViewBag.IsOwner = true;
+                //    return RedirectToAction("Reports", "MeetPlayPal");
+                //}
+                //else
+                //{
+                //    return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
+                //}
+                return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
             }
         }
 
@@ -679,11 +680,11 @@ namespace MeetPlayPal.Controllers
                 if (IsNewUser(ref user1))
                 {
                     _isNewUser = true;
-                    if (Session["SiteOwner"] != null && Session["SiteOwner"].ToString() == "SiteOwner")
-                    {
-                        user1.IsPublisher = true;
-                    }
-                    RegisterUser(ref user1);
+                    //if (Session["SiteOwner"] != null && Session["SiteOwner"].ToString() == "SiteOwner")
+                    //{
+                    //    user1.IsPublisher = true;
+                    //}
+                    //RegisterUser(ref user1);
                 }
 
 
@@ -698,9 +699,9 @@ namespace MeetPlayPal.Controllers
 
                 if (Session["MeetPlayPal"] != null && Request.Form["btnQuickLogin"] != null)
                 {
-                    AddMeetPlayPal(Session["MeetPlayPal"], user1.UserId.ToString());
-                    Session["MeetPlayPal"] = null;
-                    return View("../MeetPlayPal/BMAdded");
+                    //AddMeetPlayPal(Session["MeetPlayPal"], user1.UserId.ToString());
+                    //Session["MeetPlayPal"] = null;
+                    //return View("../MeetPlayPal/BMAdded");
                 }
                 if (_isNewUser)
                 {
@@ -711,37 +712,38 @@ namespace MeetPlayPal.Controllers
                     }
                     else
                     {
-                        MeetPlayPalCls bmrk = new MeetPlayPalCls();
-                        if (bmrk.GetMeetPlayPalsCountForUser(user1.UserId) > 0)
-                        {
-                            return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
-                        }
-                        else
-                        {
-                            return RedirectToAction("Import", "MeetPlayPal");
-                        }
+                        //MeetPlayPalCls bmrk = new MeetPlayPalCls();
+                        //if (bmrk.GetMeetPlayPalsCountForUser(user1.UserId) > 0)
+                        //{
+                        //    return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
+                        //}
+                        //else
+                        //{
+                        //    return RedirectToAction("Import", "MeetPlayPal");
+                        //}
                     }
                 }
                 else
                 {
-                    if (user1.IsOwner)
-                    {
-                        ViewBag.IsOwner = true;
-                        return RedirectToAction("Reports", "MeetPlayPal");
-                    }
-                    else
-                    {
-                        MeetPlayPalCls bmrk = new MeetPlayPalCls();
-                        if (bmrk.GetMeetPlayPalsCountForUser(user1.UserId) > 0)
-                        {
-                            return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
-                        }
-                        else
-                        {
-                            return RedirectToAction("Import", "MeetPlayPal");
-                        }
-                    }
+                    //if (user1.IsOwner)
+                    //{
+                    //    ViewBag.IsOwner = true;
+                    //    return RedirectToAction("Reports", "MeetPlayPal");
+                    //}
+                    //else
+                    //{
+                    //    MeetPlayPalCls bmrk = new MeetPlayPalCls();
+                    //    if (bmrk.GetMeetPlayPalsCountForUser(user1.UserId) > 0)
+                    //    {
+                    //        return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
+                    //    }
+                    //    else
+                    //    {
+                    //        return RedirectToAction("Import", "MeetPlayPal");
+                    //    }
+                    //}
                 }
+                return RedirectToAction("Import", "MeetPlayPal");
             }
         }
 
@@ -787,10 +789,10 @@ namespace MeetPlayPal.Controllers
                 if (IsNewUser(ref user1))
                 {
                     _isNewUser = true;
-                    if (Session["SiteOwner"] != null && Session["SiteOwner"].ToString() == "SiteOwner")
-                    {
-                        user1.IsPublisher = true;
-                    }
+                    //if (Session["SiteOwner"] != null && Session["SiteOwner"].ToString() == "SiteOwner")
+                    //{
+                    //    user1.IsPublisher = true;
+                    //}
                     RegisterUser(ref user1);
                 }
 
@@ -818,15 +820,15 @@ namespace MeetPlayPal.Controllers
                 }
                 else
                 {                   
-                    MeetPlayPalCls bmrk = new MeetPlayPalCls();
-                    if (bmrk.GetMeetPlayPalsCountForUser(user1.UserId) > 0)
-                    {
-                        return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
-                    }
-                    else
-                    {
-                        return RedirectToAction("Import", "MeetPlayPal");
-                    }                    
+                    //MeetPlayPalCls bmrk = new MeetPlayPalCls();
+                    //if (bmrk.GetMeetPlayPalsCountForUser(user1.UserId) > 0)
+                    //{
+                    //    return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
+                    //}
+                    //else
+                    //{
+                    //    return RedirectToAction("Import", "MeetPlayPal");
+                    //}                    
                 }
             }
             return null;
@@ -878,10 +880,10 @@ namespace MeetPlayPal.Controllers
                 if (IsNewUser(ref user1))
                 {
                     _isNewUser = true;
-                    if (Session["SiteOwner"] != null && Session["SiteOwner"].ToString() == "SiteOwner")
-                    {
-                        user1.IsPublisher = true;
-                    }
+                    //if (Session["SiteOwner"] != null && Session["SiteOwner"].ToString() == "SiteOwner")
+                    //{
+                    //    user1.IsPublisher = true;
+                    //}
                     RegisterUser(ref user1);
                 }
 
@@ -909,15 +911,15 @@ namespace MeetPlayPal.Controllers
                 }
                 else
                 {
-                    MeetPlayPalCls bmrk = new MeetPlayPalCls();
-                    if (bmrk.GetMeetPlayPalsCountForUser(user1.UserId) > 0)
-                    {
-                        return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
-                    }
-                    else
-                    {
-                        return RedirectToAction("Import", "MeetPlayPal");
-                    }
+                    //MeetPlayPalCls bmrk = new MeetPlayPalCls();
+                    //if (bmrk.GetMeetPlayPalsCountForUser(user1.UserId) > 0)
+                    //{
+                    //    return RedirectToAction("MyMeetPlayPals", "MeetPlayPal");
+                    //}
+                    //else
+                    //{
+                    //    return RedirectToAction("Import", "MeetPlayPal");
+                    //}
                 }
             }
             return null;
@@ -973,7 +975,7 @@ namespace MeetPlayPal.Controllers
 
         private void RegisterUser(ref Users user1)
         {
-            user1 = user1.CreateUser(user1.Email, user1.FirstName, user1.LastName, user1.IsPublisher);
+            user1 = user1.CreateUser(user1.Email, user1.FirstName, user1.LastName);
             SendEMail(user1.Email, user1.FirstName, user1.LastName);
         }
 

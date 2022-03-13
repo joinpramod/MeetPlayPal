@@ -168,7 +168,7 @@ namespace MeetPlayPal
 
 
 
-        public Users CreateUser(string strEmail, string strFirstName, string strLastName, bool IsPublisher)
+        public Users CreateUser(string strEmail, string strFirstName, string strLastName)
         {
             Users user = new Users();
             double dblUserID = 0;
