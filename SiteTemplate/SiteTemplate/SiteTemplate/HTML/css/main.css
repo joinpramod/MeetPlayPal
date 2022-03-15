@@ -32,7 +32,7 @@ body {
 	color: #363b4d;
 	overflow-x: hidden;
 	background: #fcfcfc;
-	font:400 16px/26px 'Calibri', Arial, Helvetica, sans-serif;
+	font:500 16px/26px 'Calibri', Arial, Helvetica, sans-serif;
 }
 body h1,
 body h2,
@@ -45,7 +45,7 @@ body h6 {
 	font-weight: 500;
 	line-height: 1.5;
 	font-style: normal;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 	font-family: 'Calibri', Arial, Helvetica, sans-serif;
 }
 h1 { font-size: 48px;}
@@ -53,7 +53,7 @@ h2 { font-size: 36px;}
 h3 { font-size: 24px;}
 h4 { font-size: 18px;}
 h5 { font-size: 16px;}
-h6 { font-size: 14px;}
+h6 { font-size: 16px;}
 h1 a,
 h2 a,
 h3 a,
@@ -117,7 +117,7 @@ input[type="color"],
 	outline: none;
 	height: 40px;
 	background:#fff;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 18px;
 	padding: 10px 20px;
 	border-radius: 4px;
@@ -297,7 +297,7 @@ address { font-style: italic; }
 	top: 4px;
 	left: 0;
 	color: #373542;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 14px;
 	content: '\f096';
 	position: absolute;
@@ -334,7 +334,7 @@ address { font-style: italic; }
 	vertical-align: middle;
 	text-transform: capitalize;
 	background: rgba(0,0,0,0.00);
-	font:500 16px/46px 'Calibri', Arial, Helvetica, sans-serif;
+	font:500 18px/46px 'Calibri', Arial, Helvetica, sans-serif;
 }
 .tg-btn:before{
 	top: 0;
@@ -435,7 +435,7 @@ li.tg-rss a { background:#ff6600; }
 	color: #fff;
 	width: 30px;
 	display:block;
-	font-size:13px;
+	font-size:15px;
 	line-height:30px;
 	text-align:center;
 }
@@ -449,7 +449,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-roundicontext i,
 .tg-roundicontext span {
 	float:left;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 30px;
 }
 .tg-roundicontext span { padding: 0 15px 0 0; }
@@ -474,7 +474,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 }
-.tg-bglight { background:#f7f7f7; }
+.tg-bglight { background:#faf9f9; }
 .tg-bgdark { background:#373542; }
 .tg-stars span,
 .tg-stars {
@@ -608,7 +608,7 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-sectionhead .tg-description p{
 	margin: 0;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 18px;
 }
 .tg-btnbox{
@@ -700,7 +700,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	color: #363b4d;
-	font-size: 20px;
+	font-size: 18px;;
 	font-weight: 500;
 	line-height: 23px;
 }
@@ -907,7 +907,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-navcurrency{
 	float: left;
 	padding: 13px 0;
-	font-size: 12px;
+	font-size: 14px;
 	list-style: none;
 	line-height: 16px;
 	text-transform: capitalize;
@@ -955,7 +955,7 @@ li.tg-rss a { background:#ff6600; }
 	color: #666;
 	width: 150px;
 	float: right;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 17px;
 	text-align: right;
 }
@@ -1009,7 +1009,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	color: #666;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 20px;
 	position: relative;
 	padding: 0 0 0 30px;
@@ -1039,7 +1039,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-btndropdown{
 	width: 100%;
 	float: left;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 18px;
 }
 .tg-userdropdown .tg-btndropdown{
@@ -1052,7 +1052,7 @@ li.tg-rss a { background:#ff6600; }
 	top: 0;
 	right: 0;
 	content: '\f107';
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 24px;
 	position: absolute;
 	font-family: 'FontAwesome';
@@ -1076,7 +1076,7 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-btndropdown .tg-name{
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: inherit;
 	padding: 3px 0 0 52px;
 }
@@ -1091,7 +1091,7 @@ li.tg-rss a { background:#ff6600; }
 	opacity: 0;
 	width: 230px;
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 	background: #fff;
 	border-radius: 0;
 	list-style: none;
@@ -1120,7 +1120,7 @@ li.tg-rss a { background:#ff6600; }
 	top: 0;
 	right: 20px;
 	content: '\f105';
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 44px;
 	position: absolute;
 	font-family: 'FontAwesome';
@@ -1178,7 +1178,7 @@ li.tg-rss a { background:#ff6600; }
 	vertical-align: top;
 	display: inline-block;
 	text-transform: capitalize;
-	font:500 16px/20px 'Calibri', Arial, Helvetica, sans-serif;
+	font:500 20px/20px 'Calibri', Arial, Helvetica, sans-serif;
 }
 .tg-navigation{
 	padding: 0;
@@ -1214,7 +1214,7 @@ li.tg-rss a { background:#ff6600; }
 	top: 150px;
 	left: 0;
 	opacity: 0;
-	font-size: 14px;
+	font-size: 18px;
 	line-height: 44px;
 	background: #fff;
 	text-align: left;
@@ -1253,7 +1253,7 @@ li.tg-rss a { background:#ff6600; }
 	top: 0;
 	right: 20px;
 	content: '\f105';
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 44px;
 	position: absolute;
 	font-family: 'FontAwesome';
@@ -1308,7 +1308,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-innerbanner figure figcaption{
 	width: 100%;
 	float: left;
-	min-height: 520px;
+	/*min-height: 520px;*/
 	padding: 100px 0 240px;
 	/*background: rgba(54, 59, 77, 0.88);*/
 }
@@ -1339,12 +1339,12 @@ li.tg-rss a { background:#ff6600; }
 	background: #fff;
 	overflow: hidden;
 	border-radius: 5px;
-	padding: 0 190px 0 0;
+	/*padding: 0 190px 0 0;*/
 }
 .tg-formbannersearch .form-group{
 	margin: 0;
 	float: left;
-	width: 33.33%;
+	width: 50.00%;
 	padding: 0 0 0 60px;
 	border-left: 1px solid #dbdbdb;
 }
@@ -1352,7 +1352,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-formbannersearch .tg-inputwithicon i{
 	left: 20px;
 	color: #666;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 60px;
 }
 .tg-formbannersearch .form-group .form-control,
@@ -1360,7 +1360,7 @@ li.tg-rss a { background:#ff6600; }
 	border: 0;
 	height: 60px;
 	border-radius: 0;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 30px;
 	padding: 15px 15px 15px 0;
 }
@@ -1396,7 +1396,7 @@ li.tg-rss a { background:#ff6600; }
 	color: #fff;
 	float: right;
 	margin: 5px 0 0;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 16px;
 }
 .tg-bannercontent > a:hover{color: #fff;}
@@ -1510,7 +1510,7 @@ li.tg-rss a { background:#ff6600; }
 	opacity: 0;
 	color: #666;
 	width: 100%;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 18px;
 	visibility: hidden;
 	position: absolute;
@@ -1545,7 +1545,7 @@ li.tg-rss a { background:#ff6600; }
 	left: -5px;
 	z-index: 2;
 	color: #fff;
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: 500;
 	line-height: 10px;
 	position: absolute;
@@ -1578,7 +1578,7 @@ li.tg-rss a { background:#ff6600; }
 	bottom: 52px;
 	z-index: 2;
 	color: #fff;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
 	padding: 3px 6px;
@@ -1637,7 +1637,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-productcagegories{
 	width: 100%;
 	float: left;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 18px;
 	list-style: none;
 	margin: 0 0 12px;
@@ -1678,7 +1678,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	color: #484848;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 15px;
 }
 .tg-adprice{
@@ -1697,7 +1697,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	color: #484848;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 14px;
 	font-style: normal;
 	position: relative;
@@ -1739,7 +1739,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-btnphone i,
 .tg-btnphone span,
 .tg-btnphone span em{
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 33px;
 	font-style: normal;
 }
@@ -1763,7 +1763,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-like i{
 	color: #363b4d;
 	display: block;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 30px;
 }
 .tg-like:hover,
@@ -1799,7 +1799,7 @@ li.tg-rss a { background:#ff6600; }
 	color: #666;
 	width: 105px;
 	height: 24px;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
 	text-align: right;
@@ -1859,7 +1859,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-postcategories{
 	width: 100%;
 	float: left;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 18px;
 	list-style: none;
 	margin: 0 0 12px;
@@ -1902,7 +1902,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	color: #484848;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 17px;
 	list-style: none;
 	padding: 5px 0 15px;
@@ -1970,7 +1970,7 @@ li.tg-rss a { background:#ff6600; }
 	color: #fff;
 	width: 30px;
 	height: 30px;
-	font-size: 14px;
+	font-size: 16px;
 	content: '\f10e';
 	overflow: hidden;
 	line-height: 30px;
@@ -1995,7 +1995,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-testimonial h3{
 	margin: 0;
 	clear: both;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	line-height: 20px;
 }
@@ -2161,7 +2161,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-widgetcontent ul{
 	width: 100%;
 	float: left;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 17px;
 	list-style: none;
 }
@@ -2211,13 +2211,13 @@ li.tg-rss a { background:#ff6600; }
 	width: auto;
 	margin: 0 0 0 10px;
 }
-.tg-footernav{
+.tg-footernav {
 	width: 100%;
 	float: left;
 	padding: 15px 0;
-	font-size: 14px;
+	font-size: 16px;
 	position: relative;
-	background: rgba(0,0,0,0.20);
+	/*background: rgba(0,0,0,0.20);*/
 }
 .tg-footernav:before{
 	top: 0;
@@ -2226,7 +2226,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 9999px;
 	height: 100%;
 	position: absolute;
-	background: rgba(0,0,0,0.20);
+	/*background: rgba(0,0,0,0.20);*/
 }
 .tg-footernav ul{
 	width: 100%;
@@ -2262,7 +2262,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	padding: 25px 0;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 500;
 	line-height: 20px;
 }
@@ -2373,8 +2373,8 @@ li.tg-rss a { background:#ff6600; }
 .tg-titleshortcode{
 	width: 100%;
 	float: left;
-	margin: 0 0 25px;
-	padding: 0 0 25px;
+	margin: 0 0 5px;
+	padding: 0 0 5px;
 	position: relative;
 }
 .tg-titleshortcode:before{
@@ -2384,7 +2384,7 @@ li.tg-rss a { background:#ff6600; }
 	height: 1px;
 	width: 100px;
 	position: absolute;
-	background: #dbdbdb;
+	/*background: #dbdbdb;*/
 }
 .tg-titleshortcode h2{
 	margin: 0;
@@ -2394,9 +2394,12 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-titleshortcode h2 span{
 	display: block;
-	font-size: 40px;
+	font-size: 36px;
 	line-height: 30px;
 	padding: 0 0 15px;
+}
+.tg-description-home p {
+	margin: 0 0 20px;
 }
 .tg-textshortcode .tg-description p{margin: 0 0 30px;}
 .tg-textshortcode .tg-btnbox{
@@ -2490,7 +2493,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-statistics li h4 {
 	margin: 0;
 	color: #666;
-	font-size: 20px;
+	font-size: 18px;;
 	line-height: 20px;
 }
 /*==============================================
@@ -2583,7 +2586,7 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-feature .tg-description p{
 	margin: 0;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 22px;
 }
 /*==============================================
@@ -2702,7 +2705,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-teamcontent h4{
 	margin: 0;
 	color: #666;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 14px;
 }
 .tg-team .tg-teamholder:hover figcaption{
@@ -2746,7 +2749,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-sidebartitle h2{
 	margin: 0;
 	color: #fff;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 20px;
 }
 .tg-formnerrowsearch > fieldset{
@@ -2771,7 +2774,7 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-collapsetitle a{
 	color: #363b4d;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 20px;
 	vertical-align: top;
 	display: inline-block;
@@ -2801,7 +2804,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
-	font-size: 11px;
+	font-size: 13px;
 	line-height: 20px;
 	text-align: right;
 	position: absolute;
@@ -2825,7 +2828,7 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-checkboxgroup .tg-checkbox + .tg-checkbox{margin: 5px 0 0;}
 .tg-checkboxgroup .tg-checkbox label{
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 500;
 	line-height: 16px;
 }
@@ -2878,7 +2881,7 @@ li.tg-rss a { background:#ff6600; }
 	float: left;
 	height: auto;
 	color:#484848;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 500;
 	background: none;
 	line-height: auto;
@@ -2929,7 +2932,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-views ul li a{
 	width: 32px;
 	display: block;
-	font-size: 12px;
+	font-size: 14px;
 	overflow: hidden;
 	line-height: 32px;
 	text-align: center;
@@ -2958,7 +2961,7 @@ li.tg-rss a { background:#ff6600; }
 	margin: -5px;
 	overflow: hidden;
 	list-style: none;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 22px;
 }
 .tg-applyedfilters ul li{
@@ -3080,7 +3083,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-priceandlastupdate span{
 	color: #fff;
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 19px;
 }
 .tg-priceandlastupdate span:first-child{
@@ -3148,21 +3151,21 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-memberinfo h3{
 	margin: 0 0 2px;
-	font-size: 20px;
+	font-size: 18px;;
 	line-height: 23px;
 }
 .tg-memberinfo h3 a{color: #363b4d;}
 .tg-memberinfo span{
 	color: #666;
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 20px;
 	padding: 0 0 15px;
 }
 .tg-btnseeallads{
 	float: left;
 	color: #55acee;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 14px;
 }
 .tg-sellercontact .tg-btnphone,
@@ -3211,13 +3214,13 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-sellercontact .tg-btnphone span em,
 .tg-btnmakeanoffer > span em{
-	font-size: 20px;
+	font-size: 18px;;
 	line-height: 20px;
 	padding: 0 0 6px;
 }
 .tg-sellercontact .tg-btnphone span span,
 .tg-btnmakeanoffer > span span{
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 14px;
 }
 .tg-btnphone{margin: 0 0 10px;}
@@ -3230,7 +3233,7 @@ li.tg-rss a { background:#ff6600; }
 	margin: 0 -85px 0 0;
 }
 .tg-sellercontact .tg-like i{
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 31px;
 	font-family: 'Calibri', Arial, Helvetica, sans-serif;
 }
@@ -3445,7 +3448,7 @@ li.tg-rss a { background:#ff6600; }
 	color: #666;
 	width: 105px;
 	height: 24px;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
 	text-align: right;
@@ -3612,7 +3615,7 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-formmakeanoffer .tg-inputwithicon .form-control{padding-left: 40px;}
 .tg-formmakeanoffer .form-group label{
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 20px;
 }
 .tg-formmakeanoffer .form-group label a{color: #55acee;}
@@ -3647,7 +3650,7 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-sidebar .tg-widgettitle h3{
 	color: #363b4d;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 500;
 	line-height: 20px;
 }
@@ -3673,7 +3676,7 @@ li.tg-rss a { background:#ff6600; }
 }
 .tg-sidebar .tg-formtheme .form-group .form-control{padding: 10px 40px 10px 10px;}
 .tg-widgetcontent ul{
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 500;
 	line-height: 16px;
 }
@@ -3755,7 +3758,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-postdetail .tg-description blockquote span{
 	width: 100%;
 	float: left;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	line-height: 14px;
 }
@@ -3796,7 +3799,7 @@ li.tg-rss a { background:#ff6600; }
 	color: #fff;
 	width: 30px;
 	height: 30px;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 30px;
 	text-align: center;
 	border-radius: 50%;
@@ -3822,7 +3825,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-authorhead span{
 	color: #666;
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 14px;
 }
 .tg-authorcontent .tg-description{padding: 20px 0 0;}
@@ -3887,7 +3890,7 @@ li.tg-rss a { background:#ff6600; }
 	height: 36px;
 	display: block;
 	color: #363b4d;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 36px;
 	text-align: center;
 	border-radius: 5px;
@@ -3949,7 +3952,7 @@ li.tg-rss a { background:#ff6600; }
 	margin: 0;
 	width: 100%;
 	float: left;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	line-height: 12px;
 }
@@ -3982,7 +3985,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-collapsecontent .tg-description{}
 .tg-collapsecontent .tg-description p{
 	margin: 0;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 24px;
 }
 .tg-contactarea{
@@ -4171,7 +4174,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-comingsooncounter ul li .tg-holder h4{
 	margin: 0;
 	color: #666;
-	font-size: 20px;
+	font-size: 18px;;
 	font-weight: 500;
 	line-height: 23px;
 }
@@ -4241,7 +4244,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-packagehead h4{
 	margin: 0;
 	color: #666;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 14px;
 }
 .tg-packagehead h4 span{
@@ -4257,7 +4260,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	color: #666;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 17px;
 	list-style: none;
 }
@@ -4322,7 +4325,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-forgetpassword{
 	float: right;
 	color: #55acee;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 20px;
 }
 .tg-forgetpassword:hover,
@@ -4368,7 +4371,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-formregister  i{
 	width: 50px;
 	height: 50px;
-	font-size: 20px;
+	font-size: 18px;;
 	line-height: 50px;
 	text-align: center;
 }
@@ -4378,7 +4381,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	color: #363b4d;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 20px;
 	list-style: none;
 }
