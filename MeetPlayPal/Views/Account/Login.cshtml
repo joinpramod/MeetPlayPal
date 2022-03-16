@@ -4,208 +4,116 @@
     Layout = "~/Views/Shared/Manage_MeetPlayPal.cshtml";
 }
 
+
+<main id="tg-main" class="tg-main tg-haslayout">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-                <div>
-                    <div class="section_heading">
-                        <h3><span>Login</span> </h3>
-                    </div>
-                </div>
-                <div>
-                    <ul class="fa-ul list-colored mt20" style="font-weight:500">
-                        <li>
-                            <i class="fa-li fa fa-arrow-circle-o-right"></i>Online bookmarks with tree view.
-                        </li>
-                        <li>
-                            <i class="fa-li fa fa-arrow-circle-o-right"></i>Chrome and Firefox extensions.
-                        </li>
-                        <li>
-                            <i class="fa-li fa fa-arrow-circle-o-right"></i>Import bookmarks from all your browsers here in just 1 step. Login now.
-                        </li>
-                    </ul>
-
-
-                </div>
-
-
-                            @*<div class="success_info">Thank you! your message sent successful</div>*@
-                            <div class="error_info">@ViewBag.Ack</div>
-                            @using (Html.BeginForm("ProcessActivationCode", "Account"))
-                            {
-
-                                if (ViewBag.Activation != null)
-                                {
+        <div class="row">
+            <div id="tg-content" class="tg-content">
+                <div class="tg-loginsignup">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="tg-logingarea">
+                            <h2>Login Now</h2>
+                            <form class="tg-formtheme tg-formloging">
+                                <fieldset>
                                     <div class="form-group">
-                                        <div class="error_info">@ViewBag.Activation</div>
+                                        <input type="text" name="username" class="form-control" placeholder="Username">
                                     </div>
-                                    <div class="col-lg-6 col-6">
-                                        <div class="form-area">
-                                            <button type="submit" id="btnResendAct" class="btn btn-block">Resend Activation Link</button>
-                                            @Html.Hidden("hfUserEMail", (object)ViewBag.UserActEMail)
+                                    <div class="form-group">
+                                        <input type="password" name="password" class="form-control" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="tg-checkbox">
+                                            <input id="tg-rememberme" type="checkbox" name="rememberme" value="rememberme">
+                                            <label for="tg-rememberme">Keep me logged in</label>
                                         </div>
+                                        <a class="tg-forgetpassword" href="javascript:void(0);">Forgot Password?</a>
                                     </div>
-                                }
-                            }
-                           <div style="height:20px"></div>
-                           <div class="row">
-                                                <div class="col-lg-6 col-12">
-                                                    <div class="form_area">
-                                                        @using (Html.BeginForm("ProcessLogin", "Account"))
-                                                        {
-                                                            <div class="form-group">
-                                                                @Html.TextBox("txtEMailId", "", new { @class = "form-control", placeholder = "Email ID", name = "txtEMailId", type = "email", required = "required" })
-                                                            </div>
-                                                            <div class="form-group">
-                                                                @Html.Password("txtPassword", "", new { @class = "form-control", placeholder = "Password", name = "txtPassword", type = "password", required = "required" })
-                                                            </div>
-                                                            <p class="mt20"> <a href="@Url.Action("ForgotPassword", "Account")">Forgotten your password?</a></p>
-                                                            <div class="form_area">
-                                                                <button type="submit" class="btn btn-block">LOGIN</button>
-                                                            </div>
-                                                        }
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6 col-12">
-                                                    @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-
-                                                    <p class="mt20">Don't have an account? <a href="@Url.Action("Choice", "Account")">Register</a></p>
+                                    <button class="tg-btn" type="button">Login</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="tg-texbox">
+                            <p><strong>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.</strong></p>
+                            <p>Quis nostrud exercitation ullamcoaris nisiuate aliquip ex ea commodo consequat aute irure dolor atem reprehenderit in esse.</p>
+                            <ul>
+                                <li>Proident sunt in culpa qui officia</li>
+                                <li>Deserunt mollit anim idestorum</li>
+                                <li>Sedutana perspiciatis</li>
+                                <li>Aunde omnis iste natus voluptatem</li>
+                                <li>Cullamcoaris nisiutia aliquip</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <div class="tg-videobox">
+                            <figure>
+                                <img src="images/placeholder-02.jpg" alt="image description">
+                                <a class="tg-btnplayvideo" href="javascript:void(0);"><i class="icon-play3"></i></a>
+                            </figure>
+                        </div>
+                        <div class="tg-title">
+                            <h2>Register Now</h2>
+                        </div>
+                        <div class="tg-haslayout">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                                    <form class="tg-formtheme tg-formregister">
+                                        <fieldset>
+                                            <div class="form-group tg-inputwithicon">
+                                                <i class="icon-envelope"></i>
+                                                <input type="email" name="email" class="form-control" placeholder="Email*">
+                                            </div>
+                                            <div class="form-group tg-inputwithicon">
+                                                <i class="icon-lock"></i>
+                                                <input type="password" name="password" class="form-control" placeholder="Password*">
+                                            </div>
+                                            <div class="form-group tg-inputwithicon">
+                                                <i class="icon-lock"></i>
+                                                <input type="password" name="retypepassword" class="form-control" placeholder="Retype Password*">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="tg-checkbox">
+                                                    <input id="tg-agree" type="checkbox" name="agree" value="agree">
+                                                    <label for="tg-agree">By registering, you accept our <a href="javascript:void(0);">Terms &amp; Conditions</a></label>
                                                 </div>
                                             </div>
-                <div class="row">
-                    <div class="col-6 col-md-6 text-center">
-                        <img src="~/Images/WebUser.png">
-                    </div>
-                    <div class="col-6 col-md-6  text-center">
-                        <img src="~/Images/WhatToExpect.png">
+                                            <button class="tg-btn" type="button">Register</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                    <ul class="tg-sociallogingsignup">
+                                        <li class="tg-googleplus">
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-google-plus"></i>
+                                                <span>Sign in with <strong>“Google”</strong></span>
+                                            </a>
+                                        </li>
+                                        <li class="tg-facebook">
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-facebook"></i>
+                                                <span>Sign in with <strong>“Google”</strong></span>
+                                            </a>
+                                        </li>
+                                        <li class="tg-linkedin">
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-linkedin"></i>
+                                                <span>Sign in with <strong>“Google”</strong></span>
+                                            </a>
+                                        </li>
+                                        <li class="tg-twitter">
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-twitter"></i>
+                                                <span>Sign in with <strong>“Google”</strong></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                           
-
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-@*<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-<script src="~/Scripts/js/Facebook.js"></script>
-<script src="~/Scripts/js/Google.js"></script>
-<div style="height:50px"></div>
-<h2>Login</h2><br />
-
-
-<div align="center" style="width:100%;">
-
-
-
-
-    <table style="border-radius:6%;background-color:#EFF0ED;width:30%;height:500px">
-        <tr>
-            <td align="center">
-                <table style="font-size:16px;width:90%" cellpadding="5">
-
-                    <tr>
-                        <td>
-                            <div id="divAck" style="width: 100%; font-weight: bold;  color: Red">@ViewBag.Ack</div>
-                        </td>
-                    </tr>                  
-                   
-
-                    @using (Html.BeginForm("ProcessLogin", "Account"))
-                    {
-                      if(ViewBag.Activation != null)
-                      { 
-                       <tr>
-                        <td>
-                            <span style="width: 100%; font-weight: bold;  color: Red">@ViewBag.Activation</span>
-                        </td>
-                       </tr>    
-                         
-                        <tr>
-                            <td>
-                                <input type="submit" value="Resend Activation Link" id="btnResendAct" style="border-radius:10px" class="mysubmit" />
-                                @Html.Hidden("hfUserEMail", (object)ViewBag.UserActEMail)
-                            </td>
-                        </tr>    
-                      }        
-                        <tr>
-                            <td>
-                                @Html.TextBox("txtEMailId", "", new { style = "border:groove;width:100%;border-width:1px;border-color:grey;border-radius:5px;height:40px", placeholder = "Email" })
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                @Html.Password("txtPassword", "", new { style = "border:groove;width:100%;border-width:1px;border-color:grey;border-radius:5px;height:40px", placeholder = "Password" })
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="Login" id="btnLogin" onclick="return ValidateLogin()" style="width:100%;height:40px;border-radius:10px" class="mysubmit" />
-                            </td>
-                        </tr>
-
-                    }
-                    <tr>
-                        <td>
-
-                            @Html.ActionLink("Forgot Password", "ForgotPassword", "Account", null, new { style = "font-size:14px" })
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-
-                            @Html.ActionLink("New User? Register", "Register", "Account", null, new { style = "font-size:14px" })
-
-                        </td>
-                    </tr>
-                    <tr><td>
-                        <a href="@Url.Action("ExternalLogin", "Account")" class="btn btn-block btn-facebook btn-lg btn-left-icon">
-    <span class="fa fa-facebook" aria-hidden="true"></span> Login with Facebook
-</a>
-
-                            <a href="@Url.Action("ExternalLogin", "Account")" class="btn btn-block btn-twitter btn-lg btn-left-icon">
-                                <span class="fa fa-twitter" aria-hidden="true"></span> Login with Twitter
-                            </a>
-                        </td></tr>
-                    @*<tr>
-                        <td align="center">
-                            <input type="image" onclick="FaceBookLogin()" value="Test" style="height:35px;width:200px" src="~/Images/SignInWithFacebook.png" />                           
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center">
-                            <div id="my-signin2"></div>
-                        </td>
-                    </tr>*@
-                    @*<tr>
-                        <td align="center">
-                                <section id="socialLoginForm">
-                                    @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-                                </section>
-</td>
-                    </tr>
-                </table>
-
-            </td>
-        </tr>
-    </table>
-
-
-
-
-
-
-
-</div>*@
-
-
-
-
+</main>

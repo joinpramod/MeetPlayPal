@@ -3,19 +3,28 @@
     Layout = "~/Views/Shared/Manage_MeetPlayPal.cshtml";
 }
 
-<section class="pt150 pb100">
+<main id="tg-main" class="tg-main tg-haslayout">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-12">
-                <div class="page_title_area">
-                    <div class="section_heading">
-                        <h3><span>404 Page Not Found!!</span> </h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="tg-content" class="tg-content">
+                    <div class="tg-404content">
+                        <div class="tg-404message">
+                            <h2>404</h2>
+                            <h3><span>Ooooops!</span> Something Went Wrong...</h3>
+                        </div>
+                        <form class="tg-formtheme tg-form404search">
+                            <fieldset>
+                                <input type="search" name="search" class="form-control" placeholder="Search Here">
+                                <button class="tg-btn" type="button">Search Now</button>
+                            </fieldset>
+                        </form>
+                        <div class="tg-description">
+                            <span>Or Goto <a href="javascript:void(0);">Homepage</a></span>
+                        </div>
                     </div>
-                </div>
-                <div style="color:red;font-weight:400;font-size:18px;text-align:center">
-                    Ooops!! 404 Page not found.
                 </div>
             </div>
         </div>
     </div>
-</section>
+</main>

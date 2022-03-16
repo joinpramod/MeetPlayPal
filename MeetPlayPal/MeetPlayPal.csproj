@@ -56,14 +56,14 @@
     <Reference Include="HtmlAgilityPack">
       <HintPath>C:\Users\pramo\source\repos\Bookkmark\Bookkmark\bin\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>C:\Users\pramo\source\repos\Bookkmark\Bookkmark\bin\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>C:\Users\pramo\source\repos\Bookkmark\Bookkmark\bin\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin">
-      <HintPath>C:\Users\pramo\source\repos\Bookkmark\Bookkmark\bin\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -862,8 +862,6 @@
     <Content Include="Views\Home\FAQ.cshtml" />
     <Content Include="Views\Home\NotFound.cshtml" />
     <Content Include="Views\Home\Policy.cshtml" />
-    <Content Include="Views\Account\ChangePassword.cshtml" />
-    <Content Include="Views\Account\Choice.cshtml" />
     <Content Include="Views\Account\EditUser.cshtml" />
     <Content Include="Views\Account\ExtLogin.cshtml" />
     <Content Include="Views\Account\FacebookWelcome.cshtml" />
@@ -876,8 +874,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_Layout_NoGoogle.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\Manage_MeetPlayPal.cshtml" />
-    <Content Include="Views\Shared\Ext_Manage_MeetPlayPal.cshtml" />
     <Content Include="Scripts\js\javacriptCompressor\bin\client\classes.jsa" />
     <Content Include="Scripts\js\javacriptCompressor\bin\jpicpl32.cpl" />
   </ItemGroup>

@@ -2,145 +2,266 @@
     ViewBag.Title = "Edit User";
     Layout = "~/Views/Shared/_Layout_NoGoogle.cshtml";
 }
-@model Bookmark.Users
+@model MeetPlayPal.Users
 
-<style>
-    .mycontainer {
-        display: block;
-        position: relative;
-        padding-left: 15px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 22px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-        /* Hide the browser's default checkbox */
-        .mycontainer input {
-            position: absolute;
-            opacity: 0;
-        }
-
-    /* Create a custom checkbox */
-    .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-    }
-
-    /* On mouse-over, add a grey background color */
-    .mycontainer:hover input ~ .checkmark {
-        background-color: #ccc;
-    }
-
-    /* When the checkbox is checked, add a blue background */
-    .mycontainer input:checked ~ .checkmark {
-        background-color: #fcd767;
-    }
-
-    /* Create the checkmark/indicator (hidden when not checked) */
-    .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
-
-    /* Show the checkmark when checked */
-    .mycontainer input:checked ~ .checkmark:after {
-        display: block;
-    }
-
-    /* Style the checkmark/indicator */
-    .mycontainer .checkmark:after {
-        left: 9px;
-        top: 5px;
-        width: 5px;
-        height: 10px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-</style>
-
-<section class="pt150 pb100">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-                <div class="page_title_area">
-                    <div class="section_heading">
-                        <h3><span>Edit My Info</span> </h3>
-
-                    </div>
-                </div>
-                @using (Html.BeginForm("EditUser", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                {
-                <div class="form_search">
-                    <div class="form_area">
-                        <div class="form-group row">
-                            <label class="col-3 col-form-label">First Name</label>
-                            <div class="col-9">
-                                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "First Name", required = "required" })
+<main id="tg-main" class="tg-main tg-haslayout">
+    <!--************************************
+            Section Start
+    *************************************-->
+    <section class="tg-dbsectionspace tg-haslayout">
+        <div class="row">
+            <form class="tg-formtheme tg-formdashboard">
+                <fieldset>
+                    <!--************************************
+                            Activity Start
+                    *************************************-->
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 tg-lgcolwidthhalf">
+                        <div class="tg-dashboardbox">
+                            <div class="tg-dashboardboxtitle">
+                                <h2>Profile Photo</h2>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-3 col-form-label">Last Name</label>
-                            <div class="col-9">
-                                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Last Name", required = "required" })
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-3 col-form-label">Email Id</label>
-                            <div class="col-9">
-                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "EMail", type="email", required = "required", @readonly="readonly" })
-                            </div>
-                        </div>
-                        <div style="height:20px"></div>
-
-                     @if (ViewBag.IsOwner == null || !ViewBag.IsOwner)
-                        {
-                        <div>
-                            If you want to change yourself to a publisher to use MeetPlayPal in your web application, then tick the "Update as publisher" checkbox below and save your profile.
-                            After updating yourself as publisher, go to Script tab to register your domain and generate script to use it in your application.
-                        </div>
-                        <div style="height:10px"></div>
-                        <div class="form-group row">
-                            <label class="col-3">
-                                Update as publisher                             
-                            </label>
-                            <div class="mycontainer">
-                                <label class="mycontainer">
-                                    @Html.CheckBox("chkIsPublisher", bool.Parse(ViewData["chkIsPublisher"].ToString()), new { @class = "form-control" })
-                                    <span class="checkmark"></span>
+                            <div class="tg-dashboardholder">
+                                <label class="tg-fileuploadlabel" for="tg-photogallery">
+                                    <span>Drop files anywhere to upload</span>
+                                    <span>Or</span>
+                                    <span class="tg-btn">Select Files</span>
+                                    <span>Maximum upload file size: 500 KB</span>
+                                    <input id="tg-photogallery" class="tg-fileinput" type="file" name="file">
                                 </label>
+                                <div class="tg-horizontalthemescrollbar tg-profilephotogallery">
+                                    <ul>
+                                        <li>
+                                            <figure>
+                                                <img src="images/thumbnail/img-01.jpg" alt="image description">
+                                                <i class="icon-trash"></i>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <figure class="tg-activephoto">
+                                                <img src="images/thumbnail/img-02.jpg" alt="image description">
+                                                <i class="fa fa-check-square-o"></i>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <figure>
+                                                <img src="images/thumbnail/img-02.jpg" alt="image description">
+                                                <i class="icon-trash"></i>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <figure>
+                                                <img src="images/thumbnail/img-04.jpg" alt="image description">
+                                                <i class="icon-trash"></i>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <figure>
+                                                <img src="images/thumbnail/img-05.jpg" alt="image description">
+                                                <i class="icon-trash"></i>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <figure>
+                                                <img src="images/thumbnail/img-01.jpg" alt="image description">
+                                                <i class="icon-trash"></i>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <figure>
+                                                <img src="images/thumbnail/img-02.jpg" alt="image description">
+                                                <i class="icon-trash"></i>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <figure>
+                                                <img src="images/thumbnail/img-02.jpg" alt="image description">
+                                                <i class="icon-trash"></i>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <figure>
+                                                <img src="images/thumbnail/img-04.jpg" alt="image description">
+                                                <i class="icon-trash"></i>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <figure>
+                                                <img src="images/thumbnail/img-05.jpg" alt="image description">
+                                                <i class="icon-trash"></i>
+                                            </figure>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        }
-
-                        <div class="row justify-content-center">
-
-                            <div class="col-xs-6">
-                                <button name="EditSubmit" id="EditSubmit" class="btn btn-block">Submit</button>
-                            </div>
-                            <div class="col-xs-6">
-                                <button id="Cancel" name="Cancel"  class="btn btn-block" formnovalidate>Cancel</button>
-                            </div>
-
                         </div>
                     </div>
-                </div>
-} @Html.Hidden("hfUserEMail", (object)ViewBag.UserEMail)
-            </div>
+                    <!--************************************
+                            Activity End
+                    *************************************-->
+                    <!--************************************
+                            Approved Ads Start
+                    *************************************-->
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 tg-lgcolwidthhalf">
+                        <div class="tg-dashboardbox">
+                            <div class="tg-dashboardboxtitle">
+                                <h2>Profile Detail</h2>
+                            </div>
+                            <div class="tg-dashboardholder">
+                                <div class="form-group">
+                                    <strong>I’m a:</strong>
+                                    <div class="tg-selectgroup">
+                                        <span class="tg-radio">
+                                            <input id="tg-mail" type="radio" name="gender" value="mail" checked>
+                                            <label for="tg-mail">mail</label>
+                                        </span>
+                                        <span class="tg-radio">
+                                            <input id="tg-femail" type="radio" name="gender" value="femail">
+                                            <label for="tg-femail">femail</label>
+                                        </span>
+                                        <span class="tg-radio">
+                                            <input id="tg-company" type="radio" name="gender" value="company">
+                                            <label for="tg-company">Company</label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="username" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="firstname" class="form-control" placeholder="First Name*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="lastname" class="form-control" placeholder="Last Name*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phonenumber" class="form-control" placeholder="Phone Number*">
+                                </div>
+                                <button class="tg-btn" type="button">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--************************************
+                            Approved Ads End
+                    *************************************-->
+                    <!--************************************
+                            Approved Ads Start
+                    *************************************-->
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 tg-lgcolwidthhalf">
+                        <div class="tg-dashboardbox">
+                            <div class="tg-dashboardboxtitle">
+                                <h2>Change Password</h2>
+                            </div>
+                            <div class="tg-dashboardholder">
+                                <div class="form-group">
+                                    <input type="password" name="currentpassword" class="form-control" placeholder="Current Password">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="newpassword" class="form-control" placeholder="New Password">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm New Password">
+                                </div>
+                                <button class="tg-btn" type="button">Change Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--************************************
+                            Approved Ads End
+                    *************************************-->
+                </fieldset>
+            </form>
         </div>
-    </div>
-</section>
+    </section>
+    <!--************************************
+            Section End
+    *************************************-->
+@*</main>
+
+
+
+<main id="tg-main" class="tg-main tg-haslayout">*@
+    <!--************************************
+            Section Start
+    *************************************-->
+    <section class="tg-dbsectionspace tg-haslayout">
+        <div class="row">
+            <form class="tg-formtheme tg-formdashboard">
+                <fieldset>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                        <div class="tg-dashboardbox tg-privacysetting">
+                            <div class="tg-dashboardboxtitle">
+                                <h2>Privacy Settings</h2>
+                            </div>
+                            <div class="tg-dashboardholder">
+                                <ul>
+                                    <li>
+                                        <div class="tg-checkbox">
+                                            <input id="tg-privacysettingsone" type="checkbox" name="privacy settings" value="yes" checked>
+                                            <label for="tg-privacysettingsone">Make my profile photo public</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tg-checkbox">
+                                            <input id="tg-privacysettingstwo" type="checkbox" name="privacy settings" value="yes" checked>
+                                            <label for="tg-privacysettingstwo">I want to receive monthly newsletter</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tg-checkbox">
+                                            <input id="tg-privacysettingsthree" type="checkbox" name="privacy settings" value="no">
+                                            <label for="tg-privacysettingsthree">I want to receive e-mail notifications of offers/messages</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tg-checkbox">
+                                            <input id="tg-privacysettingsfour" type="checkbox" name="privacy settings" value="yes" checked>
+                                            <label for="tg-privacysettingsfour">I want to receive e-mail alerts about new listings</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tg-checkbox">
+                                            <input id="tg-privacysettingsfive" type="checkbox" name="privacy settings" value="no">
+                                            <label for="tg-privacysettingsfive">Enable offers/messages option in all my ads Post</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="tg-btn" type="buttton">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                        <div class="tg-dashboardbox tg-deleteaccount">
+                            <div class="tg-dashboardboxtitle">
+                                <h2>Delete Account</h2>
+                            </div>
+                            <div class="tg-dashboardholder">
+                                <div class="form-group">
+                                    <div class="tg-select">
+                                        <select>
+                                            <option>Select Reason</option>
+                                            <option>Select Reason</option>
+                                            <option>Select Reason</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="description" class="form-control" placeholder="Description*"></textarea>
+                                </div>
+                                <button class="tg-btn" type="button" data-toggle="modal" data-target="#tg-modaldeleteconfirmation">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <!--************************************
+            Section End
+    *************************************-->
+</main>
 
 
 
