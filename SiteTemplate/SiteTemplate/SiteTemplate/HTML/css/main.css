@@ -1162,7 +1162,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-navigationarea{
 	width: 100%;
 	float: left;
-	padding: 40px 0;
+	padding: 20px 0;
 }
 .tg-navigationarea .tg-btn{
 	float: right;
@@ -1286,7 +1286,7 @@ li.tg-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	position: relative;
-    height:300px;
+    height:40%;
 }
 
 
