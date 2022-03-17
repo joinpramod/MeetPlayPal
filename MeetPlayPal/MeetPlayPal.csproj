@@ -864,6 +864,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\js\javacriptCompressor\bin\client\classes.jsa" />
     <Content Include="Scripts\js\javacriptCompressor\bin\jpicpl32.cpl" />
+    <Content Include="Views\Dashboard\PostMessage.cshtml" />
+    <Content Include="Views\Dashboard\PartnerList.cshtml" />
+    <Content Include="Views\Dashboard\MessageList.cshtml" />
+    <Content Include="Views\Dashboard\Interaction.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
