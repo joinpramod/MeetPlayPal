@@ -1,0 +1,508 @@
+﻿@{
+    ViewBag.Title = "Bookmark - ";
+    Layout = "~/Views/Shared/Manage_MeetPlayPal.cshtml";
+}
+
+
+
+
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<script type="text/javascript" src="~/js/JavaScript1.js"></script>
+<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script>
+    function IsRecapchaValid() {
+        var response = grecaptcha.getResponse();
+        if (response.length == 0) {
+            //reCaptcha not verified
+            alert("Please validate the recaptcha");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>
+
+
+
+<main id="tg-main" class="tg-main tg-haslayout">
+    <!--************************************
+            About Us Start
+    *************************************-->
+    <div class="container">
+        <div class="row">
+            <div id="tg-twocolumns" class="tg-twocolumns">
+                <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9 pull-right">
+                    <div id="tg-content" class="tg-content">
+                        <div class="tg-sectionhead">
+                            <div class="tg-title">
+                                <h2>News Articles List</h2>
+                            </div>
+                            <div class="tg-description">
+                                <p>Stay Updated With News</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="tg-posts tg-postslist">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="tg-post">
+                                        <figure>
+                                            <span class="tg-themetag tg-bookmarktag"><i class="icon-bookmark"></i></span>
+                                            <a href="javascript:void(0);"><img src="images/post/img-13.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Lifestyle</a></li>
+                                                <li><a href="javascript:void(0);">Entertainment</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">All I Need To Know I Learned In Kindergarten</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                            <div class="tg-description">
+                                                <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore re lokate magna aliqua enim ad minim veniam, quis nostrud exercitation risk nisiutia commodo consequat aute irure dolor... <a href="javascript:void(0);">read more</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="tg-post">
+                                        <figure>
+                                            <a href="javascript:void(0);"><img src="images/post/img-14.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Fashion</a></li>
+                                                <li><a href="javascript:void(0);">Trade</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">Applause For A Great Teacher</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                            <div class="tg-description">
+                                                <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore re lokate magna aliqua enim ad minim veniam, quis nostrud exercitation risk nisiutia commodo consequat aute irure dolor... <a href="javascript:void(0);">read more</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="tg-post">
+                                        <figure>
+                                            <span class="tg-themetag tg-bookmarktag"><i class="icon-bookmark"></i></span>
+                                            <a href="javascript:void(0);"><img src="images/post/img-15.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Trade</a></li>
+                                                <li><a href="javascript:void(0);">Business</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">Books Are Food For The Brain</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                            <div class="tg-description">
+                                                <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore re lokate magna aliqua enim ad minim veniam, quis nostrud exercitation risk nisiutia commodo consequat aute irure dolor... <a href="javascript:void(0);">read more</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="tg-post">
+                                        <figure>
+                                            <span class="tg-themetag tg-bookmarktag"><i class="icon-bookmark"></i></span>
+                                            <a href="javascript:void(0);"><img src="images/post/img-16.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Lifestyle</a></li>
+                                                <li><a href="javascript:void(0);">Entertainment</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">The Loving Yellow Bird</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                            <div class="tg-description">
+                                                <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore re lokate magna aliqua enim ad minim veniam, quis nostrud exercitation risk nisiutia commodo consequat aute irure dolor... <a href="javascript:void(0);">read more</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="tg-post">
+                                        <figure>
+                                            <span class="tg-themetag tg-bookmarktag"><i class="icon-bookmark"></i></span>
+                                            <a href="javascript:void(0);"><img src="images/post/img-17.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Fashion</a></li>
+                                                <li><a href="javascript:void(0);">Trade</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">3D Phone Launching in 2017</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                            <div class="tg-description">
+                                                <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore re lokate magna aliqua enim ad minim veniam, quis nostrud exercitation risk nisiutia commodo consequat aute irure dolor... <a href="javascript:void(0);">read more</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="tg-post">
+                                        <figure>
+                                            <a href="javascript:void(0);"><img src="images/post/img-18.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Trade</a></li>
+                                                <li><a href="javascript:void(0);">Business</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">Big Eyes Cute Stuff Toys</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                            <div class="tg-description">
+                                                <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore re lokate magna aliqua enim ad minim veniam, quis nostrud exercitation risk nisiutia commodo consequat aute irure dolor... <a href="javascript:void(0);">read more</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="tg-pagination">
+                            <ul>
+                                <li class="tg-prevpage"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li class="tg-active"><a href="#">5</a></li>
+                                <li>...</li>
+                                <li><a href="#">10</a></li>
+                                <li class="tg-nextpage"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                    <aside id="tg-sidebar" class="tg-sidebar">
+                        <div class="tg-widget tg-widgettrendingposts">
+                            <div class="tg-sidebartitle"><h2>By Title/Keyword</h2></div>
+                            <div class="tg-widgetcontent">
+                                <form class="tg-formtheme tg-formsearch">
+                                    <fieldset>
+                                        <div class="form-group tg-inputwithicon">
+                                            <i class="icon-magnifier"></i>
+                                            <input type="search" name="search" class="form-control" placeholder="Search Title/Keyword">
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tg-widget tg-widgettrendingposts">
+                            <div class="tg-sidebartitle"><h2>By Category</h2></div>
+                            <div class="tg-widgetcontent">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>Wordpress</span>
+                                            <span>120385</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>Joomla</span>
+                                            <span>86425</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>Html</span>
+                                            <span>42346</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>CSS</span>
+                                            <span>7562</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>Jquery</span>
+                                            <span>214523</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>PSD Template</span>
+                                            <span>62732</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>All</span>
+                                            <span>12512331</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tg-widget tg-widgettrendingposts">
+                            <div class="tg-sidebartitle"><h2>By Posts Type</h2></div>
+                            <div class="tg-widgetcontent">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>Featured Posts</span>
+                                            <span>987327</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>Regular Posts</span>
+                                            <span>48952413</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tg-widget tg-widgettrendingposts">
+                            <div class="tg-sidebartitle"><h2>Trending Posts</h2></div>
+                            <div class="tg-widgetcontent">
+                                <div id="tg-trendingpostsslider" class="tg-trendingpostsslider owl-carousel">
+                                    <div class="tg-post">
+                                        <figure>
+                                            <a href="javascript:void(0);"><img src="images/post/img-04.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Lifestyle</a></li>
+                                                <li><a href="javascript:void(0);">Entertainment</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">Top 10 Characters in 2017</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tg-post">
+                                        <figure>
+                                            <a href="javascript:void(0);"><img src="images/post/img-05.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Lifestyle</a></li>
+                                                <li><a href="javascript:void(0);">Entertainment</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">Top 10 Characters in 2017</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tg-post">
+                                        <figure>
+                                            <a href="javascript:void(0);"><img src="images/post/img-06.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Lifestyle</a></li>
+                                                <li><a href="javascript:void(0);">Entertainment</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">Top 10 Characters in 2017</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tg-post">
+                                        <figure>
+                                            <a href="javascript:void(0);"><img src="images/post/img-07.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Lifestyle</a></li>
+                                                <li><a href="javascript:void(0);">Entertainment</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">Top 10 Characters in 2017</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tg-post">
+                                        <figure>
+                                            <a href="javascript:void(0);"><img src="images/post/img-08.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Lifestyle</a></li>
+                                                <li><a href="javascript:void(0);">Entertainment</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">Top 10 Characters in 2017</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tg-post">
+                                        <figure>
+                                            <a href="javascript:void(0);"><img src="images/post/img-09.jpg" alt="image description"></a>
+                                        </figure>
+                                        <div class="tg-postcontent">
+                                            <ul class="tg-postcategories">
+                                                <li><a href="javascript:void(0);">Lifestyle</a></li>
+                                                <li><a href="javascript:void(0);">Entertainment</a></li>
+                                            </ul>
+                                            <div class="tg-posttitle">
+                                                <h3><a href="javascript:void(0);">Top 10 Characters in 2017</a></h3>
+                                            </div>
+                                            <ul class="tg-postmetadata">
+                                                <li>By: <a href="javascript:void(0);">Terisa Wallick</a></li>
+                                                <li><i class="icon-bubble"></i><a href="javascript:void(0);">15642</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--************************************
+            About Us End
+    *************************************-->
+</main>
+
+
+
+
+
+
+
+
+
+
+@*<div style="height:100px"></div>
+    <h2>Contact Us</h2><br />
+    <div id="Content">
+
+
+    @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new {onsubmit="return IsRecapchaValid();" }))
+    {
+
+                    <table style="width:100%;font-size:16px">
+
+                        <tr>
+                            <td align="center">
+                                <span style="font-weight:bold;color:green;font-size:14px">@Html.Raw(ViewBag.Ack)</span>
+                            </td>
+                        </tr>
+
+
+                         <tr>
+                            <td align="center">
+                                <span style="font-weight:bold;color:darkgreen;font-size:16px">You can also email us directly at contactus@MeetPlayPal.com</span>
+                            </td>
+                        </tr>
+
+                        @if(string.IsNullOrEmpty(ViewBag.UserEMail))
+                        {
+                            <tr>
+                                <td align="left" style="width:200px">
+                                    @Html.TextBox("txtEMail", "", new { style = "width:40%;height:30px;", placeholder = "EMail Id", @class = "myText" })
+                                    <br/>
+                                </td>
+                            </tr>
+                        }
+
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td style="">
+                                @Html.TextArea("txtSuggestion", "", new { style = "width:90%;height:200px;", placeholder = "Message", @class = "myText" })
+                            </td>
+                        </tr>
+                         <tr>
+                                        <td align="center">
+                                                 <div class="g-recaptcha" data-sitekey="6LfVsxATAAAAADNxqs-kXsBp1GHJMGGiENNpgpLF"></div>
+                                        </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="padding-left: 40%">
+                                &nbsp;<br />
+                                <input type="submit" value="Submit" id="btnSubmit" onclick="return ValidateSuggestion()" class="mysubmit" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" style=" font-size: medium">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td align="left">
+                                            MeetPlayPal
+                                            <br />
+                                            New Jersey,
+                                            <br />
+                                            USA
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td align="left" width="150px">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+         @Html.Hidden("hfUserEMail", (object)ViewBag.UserEMail)
+    }
+
+    </div>*@
+
+
+

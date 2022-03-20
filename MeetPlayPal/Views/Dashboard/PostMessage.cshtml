@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "PostMessage";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout_AfterLogin.cshtml";
 }
 
 <main id="tg-main" class="tg-main tg-haslayout">
@@ -16,10 +16,10 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
                             <div class="tg-dashboardbox">
                                 <div class="tg-dashboardboxtitle">
-                                    <h2>Ad Detail</h2>
+                                    <h2>Post Detail</h2>
                                 </div>
                                 <div class="tg-dashboardholder">
-                                    <div class="form-group text-center">
+                                    @*<div class="form-group text-center">
                                         <a href="#" class="tg-btn" data-toggle="modal" data-target=".tg-categorymodal">Select Category Here</a>
                                     </div>
                                     <div class="form-group">
@@ -28,7 +28,7 @@
                                             <li>Air Conditioners</li>
                                             <li>Daikin <a href="javascript:void(0);" data-toggle="modal" data-target=".tg-categorymodal">(Change)</a></li>
                                         </ol>
-                                    </div>
+                                    </div>*@
                                     <div class="form-group">
                                         <input type="text" name="adtitle" class="form-control" placeholder="Enter Ad Title*">
                                     </div>
@@ -49,75 +49,75 @@
                                         <span>Maximum upload file size: 500 KB</span>
                                         <input id="tg-photogallery" class="tg-fileinput" type="file" name="file">
                                     </label>
-                                    <div class="tg-horizontalthemescrollbar tg-profilephotogallery">
+                                    @*<div class="tg-horizontalthemescrollbar tg-profilephotogallery">
                                         <ul>
                                             <li>
                                                 <figure>
-                                                    <img src="images/thumbnail/img-01.jpg" alt="image description">
+                                                    <img src="~/Content/images/thumbnail/img-01.jpg" alt="image description">
                                                     <i class="icon-trash"></i>
                                                 </figure>
                                             </li>
                                             <li>
                                                 <figure class="tg-activephoto">
-                                                    <img src="images/thumbnail/img-02.jpg" alt="image description">
+                                                    <img src="~/Content/images/" alt="image description">
                                                     <i class="fa fa-check-square-o"></i>
                                                 </figure>
                                             </li>
                                             <li>
                                                 <figure>
-                                                    <img src="images/thumbnail/img-02.jpg" alt="image description">
+                                                    <img src="~/Content/images/thumbnail/img-02.jpg" alt="image description">
                                                     <i class="icon-trash"></i>
                                                 </figure>
                                             </li>
                                             <li>
                                                 <figure class="tg-activephoto">
-                                                    <img src="images/thumbnail/img-04.jpg" alt="image description">
+                                                    <img src="~/Content/images/thumbnail/img-04.jpg" alt="image description">
                                                     <i class="fa fa-check-square-o"></i>
                                                 </figure>
                                             </li>
                                             <li>
                                                 <figure class="tg-activephoto">
-                                                    <img src="images/thumbnail/img-05.jpg" alt="image description">
+                                                    <img src="~/Content/images/thumbnail/img-05.jpg" alt="image description">
                                                     <i class="fa fa-check-square-o"></i>
                                                 </figure>
                                             </li>
                                             <li>
                                                 <figure>
-                                                    <img src="images/thumbnail/img-01.jpg" alt="image description">
+                                                    <img src="~/Content/images/thumbnail/img-01.jpg" alt="image description">
                                                     <i class="icon-trash"></i>
                                                 </figure>
                                             </li>
                                             <li>
                                                 <figure class="tg-activephoto">
-                                                    <img src="images/thumbnail/img-02.jpg" alt="image description">
+                                                    <img src="~/Content/images/thumbnail/img-02.jpg" alt="image description">
                                                     <i class="fa fa-check-square-o"></i>
                                                 </figure>
                                             </li>
                                             <li>
                                                 <figure>
-                                                    <img src="images/thumbnail/img-02.jpg" alt="image description">
+                                                    <img src="~/Content/images/thumbnail/img-02.jpg" alt="image description">
                                                     <i class="icon-trash"></i>
                                                 </figure>
                                             </li>
                                             <li>
                                                 <figure>
-                                                    <img src="images/thumbnail/img-04.jpg" alt="image description">
+                                                    <img src="~/Content/images/thumbnail/img-04.jpg" alt="image description">
                                                     <i class="icon-trash"></i>
                                                 </figure>
                                             </li>
                                             <li>
                                                 <figure class="tg-activephoto">
-                                                    <img src="images/thumbnail/img-05.jpg" alt="image description">
+                                                    <img src="~/Content/images/thumbnail/img-05.jpg" alt="image description">
                                                     <i class="fa fa-check-square-o"></i>
                                                 </figure>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div>*@
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
-                            <div class="tg-dashboardbox">
+                            @*<div class="tg-dashboardbox">
                                 <div class="tg-dashboardboxtitle">
                                     <h2>Enable Offers/Messages</h2>
                                 </div>
@@ -127,7 +127,7 @@
                                         <label for="tg-enablemessages">Enable offers/messages option in this Post</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div>*@
                             <div class="tg-dashboardbox tg-contactdetail">
                                 <div class="tg-dashboardboxtitle">
                                     <h2>Contact Detail</h2>
@@ -190,7 +190,7 @@
                                         <input id="tg-agreetermsandrules" type="checkbox" name="agreetermsandrules" value="on">
                                         <label for="tg-agreetermsandrules">I agree to all <a href="javascript:void(0);">Terms of Use &amp; Posting Rules</a></label>
                                     </div>
-                                    <button class="tg-btn" type="button">Post Ad</button>
+                                    <button class="tg-btn" type="button">Post Interest</button>
                                 </div>
                             </div>
                         </div>
