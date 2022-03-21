@@ -200,13 +200,17 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <strong>
-                                <a style="font-size: 38px; font-family: 'Caveat'; " href="index.html">
+                                <a style="font-size: 38px; font-family: 'Caveat'; " href="@Url.Action("Index", "Home")">
                                     <img src="~/Content/images/logo3.png" style="width:120px;height:110px">
                                     Meet Play Pal
                             </strong>
-                            <a class="tg-btn" href="dashboard-postanad.html">
+                            @*<a class="tg-btn" href="dashboard-postanad.html">
                                 <i class="icon-bullhorn"></i>
                                 <span>Post your interest</span>
+                            </a>*@
+                            <a class="tg-btn" href="@Url.Action("PostMessage", "Dashboard")">
+                                <i class="icon-bullhorn"></i>
+                                <span>My public post</span>                                
                             </a>
                             <nav id="tg-nav" class="tg-nav" style="padding-left:5%">
                                 <div class="navbar-header">
@@ -220,20 +224,20 @@
                                 <div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
                                     <ul>
                                         <!--<li>
-                                        <a href="index.html">Home</a>-->
+    <a href="index.html">Home</a>-->
                                         <!--<ul class="sub-menu">
-                                        <li><a href="index.html">Home V1</a></li>-->
+    <li><a href="index.html">Home V1</a></li>-->
                                         <!--<li><a href="indexv2.html">Home V2</a></li>-->
                                         <!--</ul>-->
                                         <!--</li>-->
                                         <!--<li class="menu-item-has-children current-menu-item">
-                                        <a href="javascript:void(0);">Listings</a>
-                                        <ul class="sub-menu">-->
+    <a href="javascript:void(0);">Listings</a>
+    <ul class="sub-menu">-->
                                         <!--<li><a href="adlistinggrid.html">Ad Grid</a></li>-->
                                         <!--<li><a href="adlistinglist.html">Ad Listing</a></li>-->
                                         <!--<li><a href="addetail.html">Listing Detail</a></li>-->
                                         <!--</ul>
-                                        </li>-->
+    </li>-->
                                         <li class="menu-item-has-children">
                                             <a href="javascript:void(0);">Dashboard</a>
                                             <ul class="sub-menu">
@@ -246,7 +250,7 @@
                                                 <!--<li><a href="dashboard-payments.html">Dashboard Payment</a></li>-->
                                                 <!--<li><a href="dashboard-postanad.html">Dashboard Post Ad</a></li>-->
                                                 @*<li><a href="dashboard-privacy-setting.html">Dashboard privacy Setting</a></li>
-        <li><a href="dashboard-profile-setting.html">Dashboard Profile Setting</a></li>*@
+                <li><a href="dashboard-profile-setting.html">Dashboard Profile Setting</a></li>*@
                                             </ul>
                                         </li>
                                         <li class="menu-item-has-children">
@@ -262,13 +266,15 @@
                                                     <!--<li><a href="newsdetail.html">News detail</a></li>-->
                                                     <!--</ul>-->
                                                 </li>
+                                                <li><a href="@Url.Action("FAQ", "Home")">FAQ</a> </li>
                                                 <!--<li><a href="404error.html">404 Error</a></li>-->
                                                 <!--<li><a href="comingsoon.html">Coming Soon</a></li>-->
                                                 <!--<li><a href="packages.html">Packages</a></li>-->
-                                                <li><a href="@Url.Action("Login", "Account")">Login/Register</a>@*<a href="loginsignup.html">Login/Register</a>*@</li>
+
                                             </ul>
                                         </li>
                                         <li><a href="@Url.Action("Contact", "Home")">Contact Us</a>@*<a href="contactus.html">Contact Us</a>*@</li>
+                                        <li><a href="@Url.Action("Login", "Account")">Login/Register</a>@*<a href="loginsignup.html">Login/Register</a>*@</li>
                                     </ul>
                                 </div>
                             </nav>
@@ -292,7 +298,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="tg-bannercontent" style="padding-top:1%">
+                            <div class="tg-bannercontent" style="padding-top:1%;">
                                 <!--<h1>World’s Largest Marketplace</h1>-->
                                 <form class="tg-formtheme tg-formbannersearch">
                                     <h3> Ping Pong (Table Tennis), Tennis, Pool, Badminton</h3>
@@ -301,15 +307,15 @@
                                             <i class="icon-bullhorn"></i>
                                         <input type="text" name="customword" class="form-control" placeholder="What are you looking for">
                                         </div>-->
-                                        <div class="form-group tg-inputwithicon">
+                                        <div class="form-group tg-inputwithicon" style="background-color: #f0efef">
                                             <i class="icon-location"></i>
                                             <a class="tg-btnsharelocation fa fa-crosshairs" href="javascript:void(0);"></a>
-                                            <input type="text" name="yourlocation" class="form-control" placeholder="Your Zipcode">
+                                            <input type="text" name="yourlocation" style="background-color: #f0efef" class="form-control" placeholder="Your Zipcode">
                                         </div>
-                                        <div class="form-group tg-inputwithicon">
+                                        <div class="form-group tg-inputwithicon"  style="background-color: #f0efef">
                                             <i class="icon-layers"></i>
-                                            <div class="tg-select">
-                                                <select>
+                                            <div class="tg-select" style="background-color: #f0efef">
+                                                <select style="background-color: #f0efef">
                                                     <option value="none">Select Sport</option>
                                                     <option value="none">Tennis</option>
                                                     <option value="none">Ping Pong (Table Tennis)</option>
@@ -428,12 +434,13 @@
                                     <nav class="tg-footernav">
                                         <ul>
                                             @*<li><a href="javascript:void(0);">Listing Policy</a></li>
-                                                <li><a href="javascript:void(0);">Terms of Use</a></li>*@
+        <li><a href="javascript:void(0);">Terms of Use</a></li>*@
                                             <li><a href="@Url.Action("Policy", "Home")">News</a>@*<a href="javascript:void(0);">Privacy Policy</a>*@</li>
                                             <!--<li><a href="javascript:void(0);">Mobiles Policy</a></li>-->
                                             <!--<li><a href="javascript:void(0);">Change Currency</a></li>-->
                                             <!--<li><a href="javascript:void(0);">Sitemap</a></li>-->
-                                            <li><a href="@Url.Action("News", "Home")">News</a>@*<a href="javascript:void(0);">News</a>*@</li>
+                                            <li><a href="@Url.Action("FAQ", "Home")">FAQ</a> </li>
+                                            @*<a href="javascript:void(0);">News</a>*@
                                         </ul>
                                     </nav>
                                     <span class="tg-copyright">2020 All Rights Reserved &copy; Meet Play Pal</span>

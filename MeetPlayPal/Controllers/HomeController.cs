@@ -130,6 +130,11 @@ namespace MeetPlayPal.Controllers
             return View();
         }
 
+        public ActionResult News()
+        {
+            return View();
+        }
+
         public ActionResult NotFound()
         {        
             //Mail mail = new Mail();
