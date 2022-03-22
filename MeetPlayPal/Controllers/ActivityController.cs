@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MeetPlayPal.Controllers
 {
-    public class DashboardController : Controller
+    public class ActivityController : Controller
     {
         // GET: Dashboard
         public ActionResult Interaction()

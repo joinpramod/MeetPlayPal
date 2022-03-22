@@ -195,7 +195,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\ActivityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -865,10 +865,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\js\javacriptCompressor\bin\client\classes.jsa" />
     <Content Include="Scripts\js\javacriptCompressor\bin\jpicpl32.cpl" />
-    <Content Include="Views\Dashboard\PostMessage.cshtml" />
-    <Content Include="Views\Dashboard\PartnerList.cshtml" />
-    <Content Include="Views\Dashboard\MessageList.cshtml" />
-    <Content Include="Views\Dashboard\Interaction.cshtml" />
+    <Content Include="Views\Activity\PostMessage.cshtml" />
+    <Content Include="Views\Activity\PartnerList.cshtml" />
+    <Content Include="Views\Activity\MessageList.cshtml" />
+    <Content Include="Views\Activity\Interaction.cshtml" />
     <Content Include="Views\Shared\_Layout_AfterLogin.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
   </ItemGroup>
