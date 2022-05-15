@@ -180,10 +180,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppCode\ZipCode.cs" />
+    <Compile Include="AppCode\UserSports.cs" />
+    <Compile Include="AppCode\Status.cs" />
+    <Compile Include="AppCode\Sports.cs" />
+    <Compile Include="AppCode\Post.cs" />
+    <Compile Include="AppCode\News.cs" />
+    <Compile Include="AppCode\Message.cs" />
+    <Compile Include="AppCode\Image.cs" />
+    <Compile Include="AppCode\FileInfo.cs" />
+    <Compile Include="AppCode\Country.cs" />
+    <Compile Include="AppCode\City.cs" />
     <Compile Include="AppCode\ConnManager.cs" />
     <Compile Include="AppCode\Encryption.cs" />
     <Compile Include="AppCode\Mail.cs" />
     <Compile Include="AppCode\reCaptchaHelper.cs" />
+    <Compile Include="AppCode\Address.cs" />
     <Compile Include="AppCode\Suggestion.cs" />
     <Compile Include="AppCode\Users.cs" />
     <Compile Include="AppCode\Utilities.cs" />

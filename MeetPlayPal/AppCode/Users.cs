@@ -7,7 +7,7 @@ using System.Configuration;
 namespace MeetPlayPal
 {
 
-    public enum RegisType { WebUser, SiteOwner }
+   
 
     public class Users
     {
@@ -17,17 +17,14 @@ namespace MeetPlayPal
         public string LastName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-        //public bool IsPublisher { get; set; }
-        //public bool IsOwner { get; set; }
-        //public bool IsWebUser { get; set; }
-        //public string ScriptId { get; set; }
+        public double AddrId { get; set; }
+        public double ImageId { get; set; }
+        public string Status_Code { get; set; }
+        public double CreatedUser { get; set; }
+        public double ModifiedUser { get; set; }
         public System.DateTime CreatedDateTime { get; set; }
         public System.DateTime ModifiedDateTime { get; set; }
-        public string ImageURL { get; set; }
-        //public string Company { get; set; }
-        //public string Details { get; set; }
-        //public string Address { get; set; }
-        public string Status { get; set; }
+
 
         public bool CreateUsers(ref double NewMasterID)
         {
@@ -55,7 +52,7 @@ namespace MeetPlayPal
 
         public bool SetCommandUser(ref SqlCommand CmdSent)
         {
-            SqlCommand Cmd = new SqlCommand("User_Sp");
+            SqlCommand Cmd = new SqlCommand("UserInfo_Sp");
             Cmd.CommandType = CommandType.StoredProcedure;
 
 
@@ -65,9 +62,11 @@ namespace MeetPlayPal
             SqlParameter ParamLastName = Cmd.Parameters.Add("@LastName", SqlDbType.VarChar);
             SqlParameter ParamPassword = Cmd.Parameters.Add("@Password", SqlDbType.VarChar);
             SqlParameter ParamEmail = Cmd.Parameters.Add("@Email", SqlDbType.VarChar);
-            //SqlParameter ParamIsPublisher = Cmd.Parameters.Add("@IsPublisher", SqlDbType.Bit);
-            //SqlParameter ParamIsWebUser = Cmd.Parameters.Add("@IsWebUser", SqlDbType.VarChar);
             SqlParameter ParamStatus = Cmd.Parameters.Add("@Status", SqlDbType.VarChar);
+            SqlParameter ParamAdrId = Cmd.Parameters.Add("@AdrId", SqlDbType.Float);
+            SqlParameter ParamImageId = Cmd.Parameters.Add("@ImageId", SqlDbType.Float);
+            SqlParameter ParamCreatedUser = Cmd.Parameters.Add("@CreatedUser", SqlDbType.Float);
+            SqlParameter ParamModifiedUser = Cmd.Parameters.Add("@ModifiedUser", SqlDbType.Float);
             SqlParameter ParamCreatedDateTime = Cmd.Parameters.Add("@CreatedDateTime", SqlDbType.DateTime);
             SqlParameter ParamModifiedDateTime = Cmd.Parameters.Add("@ModifiedDateTime", SqlDbType.DateTime);
 
@@ -83,25 +82,17 @@ namespace MeetPlayPal
             ParamPassword.Direction = ParameterDirection.Input;
             ParamEmail.Value = Email;
             ParamEmail.Direction = ParameterDirection.Input;
-
-            //ParamIsPublisher.Value = IsPublisher;
-            //ParamIsPublisher.Direction = ParameterDirection.Input;
-            //ParamIsWebUser.Value = IsWebUser;
-            //ParamIsWebUser.Direction = ParameterDirection.Input;
-            //ParamDomainName.Value = DomainName;
-            //ParamDomainName.Direction = ParameterDirection.Input;
-            ParamStatus.Value = Status;
+            ParamStatus.Value = Status_Code;
             ParamStatus.Direction = ParameterDirection.Input;
-            //ParamImageURL.Value = StrImageURL;
-            //ParamImageURL.Direction = ParameterDirection.Input;
-            //ParamCompany.Value = StrCompany;
-            //ParamCompany.Direction = ParameterDirection.Input;
-            //ParamDetails.Value = StrDetails;
-            //ParamDetails.Direction = ParameterDirection.Input;
-            //ParamStatus.Value = StrStatus;
-            //ParamStatus.Direction = ParameterDirection.Input;
-            //ParamAddress.Value = StrAddress;
-            //ParamAddress.Direction = ParameterDirection.Input;
+            ParamAdrId.Value = AddrId;
+            ParamAdrId.Direction = ParameterDirection.Input;
+            ParamImageId.Value = ImageId;
+            ParamImageId.Direction = ParameterDirection.Input;
+            ParamCreatedUser.Value = CreatedUser;
+            ParamCreatedUser.Direction = ParameterDirection.Input;
+            ParamModifiedUser.Value = ModifiedUser;
+            ParamModifiedUser.Direction = ParameterDirection.Input;
+
 
             if (CreatedDateTime < DateTime.Parse("1-1-2000"))
             {
@@ -128,7 +119,6 @@ namespace MeetPlayPal
             return true;
         }
 
-
         public Users GetUser(string emailId)
         {
             Users _user = new Users();
@@ -149,24 +139,10 @@ namespace MeetPlayPal
                 _user.FirstName = dt.Rows[i]["FirstName"].ToString();
                 _user.LastName = dt.Rows[i]["LastName"].ToString();
 
-                //if (dt.Rows[i]["IsPublisher"] == null)
-                //    _user.IsPublisher = false;
-                //else
-                //_user.IsPublisher = bool.Parse(dt.Rows[i]["IsPublisher"].ToString());
-
-                //if (_user.IsPublisher)
-                //{
-                //    if (dt.Rows[i]["IsOwner"] == null)
-                //        _user.IsOwner = false;
-                //    else
-                //        _user.IsOwner = bool.Parse(dt.Rows[i]["IsOwner"].ToString());
-                //}
             }
 
             return _user;
         }
-
-
 
         public Users CreateUser(string strEmail, string strFirstName, string strLastName)
         {
@@ -175,7 +151,7 @@ namespace MeetPlayPal
             user.Email = strEmail.Trim();
             user.FirstName = strFirstName.Trim();
             user.LastName = strLastName;
-            //user.IsPublisher = IsPublisher;
+            user.Password = Password;
             user.OptionID = 1;
             user.CreatedDateTime = DateTime.Now;
             user.CreateUsers(ref dblUserID);
@@ -214,7 +190,6 @@ namespace MeetPlayPal
             }
         }
 
-
         public void CreateUserActivation(Users user, string activationCode, double dblUserID)
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLCON"].ToString()))
@@ -235,8 +210,6 @@ namespace MeetPlayPal
                 }
             }
         }
-
-
 
         public string ActivateUser(string ActivationCode)
         {
