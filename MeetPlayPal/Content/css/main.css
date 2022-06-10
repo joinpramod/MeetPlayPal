@@ -313,7 +313,7 @@ address { font-style: italic; }
 	width:100%;
 	float:left;
 }
-.tg-sectionspace {padding: 40px 0;}
+.tg-sectionspace {padding: 10px 0;}
 .tg-locationmap {
 	width: 100%;
 	float: left;
@@ -877,7 +877,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-content{
 	width: 100%;
 	float: left;
-	padding: 80px 0;
+	padding: 10px 0;
 }
 .tg-twocolumns .tg-content{padding: 0;}
 /*==============================================
@@ -2889,8 +2889,8 @@ li.tg-rss a { background:#ff6600; }
 .tg-contenthead{
 	width: 100%;
 	float: left;
-	margin: 0 0 15px;
-	padding: 0 0 25px;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
 	border-bottom: 1px solid #dbdbdb;
 }
 .tg-sortandview{

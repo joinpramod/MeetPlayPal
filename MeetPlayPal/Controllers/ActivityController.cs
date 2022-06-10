@@ -28,5 +28,9 @@ namespace MeetPlayPal.Controllers
         {
             return View();
         }
+        public ActionResult Search()
+        {
+            return View();
+        }
     }
 }
