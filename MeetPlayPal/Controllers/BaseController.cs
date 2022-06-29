@@ -31,26 +31,9 @@ namespace MeetPlayPal.Controllers
                 }
                 else
                 {
-                    if (Request.Url.AbsoluteUri.Contains("bookmark/barcharts")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/barchartshorizon")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/bmadded")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/delete")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/domains")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/editbmfolder")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/import")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/linecharts")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/movebmfolder")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/mybookmarks")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/newbmfolder")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/piecharts")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/reports")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/scriptcode")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("account/changepassword")
+                    if (Request.Url.AbsoluteUri.ToLower().Contains("account/changepassword")
                         || Request.Url.AbsoluteUri.ToLower().Contains("account/edituser")
-                        || Request.Url.AbsoluteUri.ToLower().Contains("account/viewuser")
-                          || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/add")
-                          || Request.Url.AbsoluteUri.ToLower().Contains("bookmark/addbmrk")
-                        )
+                        || Request.Url.AbsoluteUri.ToLower().Contains("account/viewuser"))
                     {
                         //filterContext.Result = new RedirectResult("Account/Login");
                         filterContext.Result = new RedirectToRouteResult(
@@ -60,14 +43,14 @@ namespace MeetPlayPal.Controllers
 
                     }
 
-                    if (Request.Url.AbsoluteUri.ToLower().Contains("bookmark/extbookmarks"))
-                    {
-                        filterContext.Result = new RedirectToRouteResult(
-                                                   new RouteValueDictionary
-                                                       {{"controller", "Account"}, {"action", "ExtLogin"}});
-                        return;
+                    //if (Request.Url.AbsoluteUri.ToLower().Contains("bookmark/extbookmarks"))
+                    //{
+                    //    filterContext.Result = new RedirectToRouteResult(
+                    //                               new RouteValueDictionary
+                    //                                   {{"controller", "Account"}, {"action", "ExtLogin"}});
+                    //    return;
 
-                    }
+                    //}
                 }
             }
             catch (Exception ex)

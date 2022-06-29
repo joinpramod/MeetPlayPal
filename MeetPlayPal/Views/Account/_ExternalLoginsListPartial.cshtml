@@ -1,12 +1,12 @@
 ﻿@model MeetPlayPal.Models.ExternalLoginListViewModel
 @using Microsoft.Owin.Security
-
+<link href="~/Content/css/main.css" rel="stylesheet" />
 
 @{
     using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = Model.ReturnUrl }))
     {
-                @Html.AntiForgeryToken()
-        <button class="btn btn-block btn-facebook btn-lg btn-left-icon" id="Facebook" name="Facebook" value="Facebook">
+        @Html.AntiForgeryToken()
+        @*<button class="btn btn-block btn-facebook btn-lg btn-left-icon" id="Facebook" name="Facebook" value="Facebook">
             <span class="fa fa-facebook" aria-hidden="true"></span> Login with Facebook
         </button>
 
@@ -16,7 +16,51 @@
 
         <button class="btn btn-block btn-twitter btn-lg btn-left-icon" id="Twitter" name="Twitter" value="Twitter">
             <span class="fa fa-twitter" aria-hidden="true"></span> Login with Twitter
-        </button>
+        </button>*@
+
+
+        @*<ul class="tg-sociallogingsignup">
+            <li class="tg-googleplus">
+                <button class="btn btn-block btn-google btn-lg btn-left-icon" id="Google" name="Google" value="Google">
+                    <i class="fa fa-google-plus"></i>
+                    <span>Sign in with <strong>“Google”</strong></span>
+                </button>
+            </li>
+
+            <li class="tg-facebook">
+                <button class="btn btn-block btn-facebook btn-lg btn-left-icon" id="Facebook" name="Facebook" value="Facebook">
+                    <i class="fa fa-facebook"></i>
+                    <span>Sign in with <strong>“Facebook”</strong></span>
+                </button>
+            </li>
+            <li class="tg-twitter">
+                <button class="btn btn-block btn-twitter btn-lg btn-left-icon" id="Twitter" name="Twitter" value="Twitter">
+                    <i class="fa fa-twitter"></i>
+                    <span>Sign in with <strong>“Google”</strong></span>
+                </button>
+            </li>
+        </ul>*@
+
+        <ul class="tg-sociallogingsignup">
+                <li class="tg-googleplus">
+                    <a href="javascript:void(0);" id="Google" name="Google" value="Google">
+                        <i class="fa fa-google-plus"></i>
+                        <span>Sign in with <strong>“Google”</strong></span>
+                    </a>
+                </li>
+                <li class="tg-facebook">
+                    <a href="javascript:void(0);" id="Facebook" name="Facebook" value="Facebook">
+                        <i class="fa fa-facebook"></i>
+                        <span>Sign in with <strong>“Facebook”</strong></span>
+                    </a>
+                </li>
+                <li class="tg-twitter">
+                    <a href="javascript:void(0);" id="Twitter" name="Twitter" value="Twitter">
+                        <i class="fa fa-twitter"></i>
+                        <span>Sign in with <strong>“Twitter”</strong></span>
+                    </a>
+                </li>
+            </ul>
 
 
     }

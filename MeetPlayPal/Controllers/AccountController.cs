@@ -313,7 +313,7 @@ namespace MeetPlayPal.Controllers
         {
             double dblUserID = 0;
             Users tempUser = new Users();
-            ViewData["chkIsPublisher"] = false;
+          //  ViewData["chkIsPublisher"] = false;
                 
             tempUser = (Users)Session["User"];
             //if (Request.Form["Edit"] != null)
