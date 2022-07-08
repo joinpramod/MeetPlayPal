@@ -122,7 +122,7 @@
     <!--************************************
             Wrapper Start
     *************************************-->
-    <div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+    <div id="tg-wrapper" class="tg-wrapper tg-haslayout"  style="height:100%">
         <!--************************************
                 Header Start
         *************************************-->
@@ -159,8 +159,8 @@
 
                                 <li><a href="@Url.Action("MessageList", "Activity")">Enquiries from others</a>@*<a href="dashboard.html">Requests from others</a>*@</li>
                                 <li><a href="@Url.Action("PartnerList", "Activity")">Enquiries from me</a>@*<a href="dashboard-myads.html">My requests</a>*@</li>
-                                <li><a href="@Url.Action("PartnerList", "Activity")">My current pals</a>@*<a href="dashboard-myads.html">My requests</a>*@</li>
-                                <!--<li><a href="@Url.Action("Interaction", "Activity")">Interaction</a>-->@*<a href="dashboard-myads.html">My requests</a>*@<!--</li>-->
+                                <li><a href="@Url.Action("CurrentPals", "Activity")">My current pals</a>@*<a href="dashboard-myads.html">My requests</a>*@<!--</li>-->
+                                <li><a href="@Url.Action("Interaction", "Activity")">Interaction</a>@*<a href="dashboard-myads.html">My requests</a>*@<!--</li>-->
                                 <li><a href="@Url.Action("PostMessage", "Activity")">My public post</a>@*<a href="dashboard-offermessages.html">My public post</a>*@</li>
                                 <!--<li><a href="dashboard-myfavourites.html">Dashboard Favorites</a></li>-->
                                 <!--<li><a href="dashboard-payments.html">Dashboard Payment</a></li>-->
@@ -343,9 +343,9 @@
         <!--************************************
                 Main Start
         *************************************-->
-
-        @RenderBody()
-
+        <div style="height:95%">
+            @RenderBody()
+        </div>
 
     <footer id="tg-footer" class="tg-footer tg-haslayout">
         <nav class="tg-footernav">

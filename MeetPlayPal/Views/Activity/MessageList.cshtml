@@ -4,16 +4,6 @@
     Layout = "~/Views/Shared/_Layout_AfterLogin.cshtml";
 }
 
-@*<div class="tg-dashboardbanner">
-        <h1>My Ads</h1>
-        <ol class="tg-breadcrumb">
-            <li><a href="javascript:void(0);">Home</a></li>
-            <li><a href="javascript:void(0);">Dashboard</a></li>
-            <li class="tg-active">My Ads</li>
-        </ol>
-    </div>*@
-
-
 @{
     MeetPlayPal.Models.PagingInfo info = ViewBag.PagingInfo;
 }
@@ -107,53 +97,17 @@
                                     <table id="tg-adstype" class="table tg-dashboardtable tg-tablemyads">
                                         <thead>
                                             <tr>
-                                                @*<th>
-                                                        <span class="tg-checkbox">
-                                                            <input id="tg-checkedall" type="checkbox" name="myads" value="checkall">
-                                                            <label for="tg-checkedall"></label>
-                                                        </span>
-                                                    </th>*@
                                                 <th>From</th>
                                                 <th>Message</th>
                                                 <th>Sports</th>
-                                                @*<th>Featured</th>
-                                                    <th>Ad Status</th>*@
-                                                @*<th>Price &amp; Location</th>*@
                                                 <th>Date</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-
-
-                                            @*<%@foreach (var msg in Model)
-                                                {
-                                                    <tr>
-                                                        <td>
-                                                            @Html.ActionLink("Edit", "Edit", new { id = item.Id })  |
-                                                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                                                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })>
-                                                        </td>
-                                                        <td>
-                                                            <%: item.Id %>
-                                                        </td>
-                                                        <td>
-                                                            <%: item.Name %>
-                                                        </td>
-                                                        <td>
-                                                            <%: item.Salary %>
-                                                        </td>
-                                                        <td>
-                                                            <%: item.Address %>
-                                                        </td>
-                                                    </tr>
-                                                } @%>*@
-
-
                                             @foreach (var msg in Model)
                                             {
                                                 <tr data-category="active">
-                                                    @*<td data-title="Photo"><img src="images/thumbnail/img-06.jpg" alt="image description"></td>*@
                                                     <td data-title="Message">@msg.MsgFrom</td>
                                                     <td data-title="Message">
                                                         <h3>@msg.MessageText</h3>
@@ -166,8 +120,8 @@
                                                     <td data-title="Action">
                                                         <div class="tg-btnsactions">
                                                             <a class="tg-btnaction tg-btnactionview" href="@Url.Action("Index", "Home", new { id = msg.MessageId })" title="View"><i class="fa fa-eye"></i></a>
-                                                            <a class="tg-btnaction tg-btnactionview" href="@Url.Action("Index", "Home", new { id = msg.MessageId })" title="Reply"><i class="fa fa-pencil"></i></a>
-                                                            @*<a class="tg-btnaction tg-btnactiondelete" href="@Url.Action("Index", "Home", new { id = msg.MessageId })" title="Delete"><i class="fa fa-trash" ></i></a>*@
+                                                            @*<a class="tg-btnaction tg-btnactionview" href="@Url.Action("Index", "Home", new { id = msg.MessageId })" title="Reply"><i class="fa fa-pencil"></i></a>*@
+                                                            <a class="tg-btnaction tg-btnactionview" href="@Url.Action("Index", "Home", new { id = msg.MessageId })" title="Delete"><i class="fa fa-trash"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -191,23 +145,6 @@
                                             }
                                         </ul>
                                     </nav>
-                                    @*<table>
-                                        <tr>
-                                            @for (var i = 0; i < info.PageCount; i++)
-                                            {
-                                                if (i == info.CurrentPageIndex)
-                                                {
-                                                    <td>@(i + 1)&nbsp; &nbsp;</td>
-                                                }
-                                                else
-                                                {
-                                                    <td>
-                                                        <a href="#" data-pageindex="@i" class="pager" style="font-weight:bold">@(i + 1)</a>&nbsp; &nbsp;
-                                                    </td>
-                                                }
-                                            }
-                                        </tr>
-                                    </table>*@
                                 </div>
                             </div>
                         </div>

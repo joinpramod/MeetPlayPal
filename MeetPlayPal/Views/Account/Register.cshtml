@@ -84,7 +84,7 @@
 
                                 <div id="divAck" class="error_info"></div>
                                 <div class="error_info">@ViewBag.Ack</div>
-                                <div class="row">
+                                <div  class="tg-dashboardbox tg-contactdetail">
                                     <div class="col-lg-6 col-6">
                                         <div class="form_area">
                                             @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -105,6 +105,41 @@
                                                 <div class="form-group">
                                                     @Html.Password("txtConfirmPassword", "", new { placeholder = "Confirm Password", @class = "form-control" })
                                                 </div>
+                                                <div class="form-group">
+                                                    <input type="text" name="phone" class="form-control" placeholder="Phone*">
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="tg-select">
+                                                        <select>
+                                                            <option>Select Country</option>
+                                                            <option>Select Country</option>
+                                                            <option>Select Country</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="tg-select">
+                                                        <select>
+                                                            <option>Select State</option>
+                                                            <option>Select State</option>
+                                                            <option>Select State</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="tg-select">
+                                                        <select>
+                                                            <option>Select City</option>
+                                                            <option>Select City</option>
+                                                            <option>Select City</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group tg-inputwithicon">
+                                                    @*<i class="fa fa-crosshairs"></i>*@
+                                                    <input type="text" name="enteraddress" class="form-control" placeholder="Enter Address">
+                                                </div>
+                                                <div class="row">
                                                 <div>
                                                     @if (ViewBag.Ack == null)
                                                     {
@@ -113,9 +148,10 @@
                                                     }
                                                 </div>
 
-                                                <div class="form_area">
-                                                    <button class="tg-btn"  type="submit" onclick="return ValidateUserReg()">Register</button>
+                                                <div>
+                                                    <button class="tg-btn" type="submit" onclick="return ValidateUserReg()"> Register</button>
                                                 </div>
+                                                 </div>
                                             }
                                         </div>
                                     </div>
@@ -123,7 +159,7 @@
                                         @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
                                         <p class="mt20">Already have an account? <a href="@Url.Action("Login", "Account")">Login</a></p>
                                     </div>
-                                </div>
+                                </div>                              
                             </div>
                         </div>
                     </div>

@@ -885,6 +885,7 @@
     <Content Include="Views\Shared\_Layout_AfterLogin.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Activity\Search.cshtml" />
+    <Content Include="Views\Activity\CurrentPals.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

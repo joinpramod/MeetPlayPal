@@ -1,3 +1,6 @@
+html, body {
+	height: 100%;
+}
 .tg-btn{cursor: pointer;}
 .tg-checkbox input[type=checkbox] + label,
 .tg-radio input[type=radio] + label{
@@ -630,7 +633,7 @@ input[type=file].tg-fileinput{display: none;}
 			Dashboard Main						
 ==============================================*/
 .tg-main{
-	min-height: 731px;
+	/*min-height: 731px;*/
 	padding: 20px 60px;
 }
 /*==============================================
@@ -1022,7 +1025,7 @@ input[type=file].tg-fileinput{display: none;}
 .tg-memessage .tg-description p{
 	width: auto;
 	padding: 10px;
-	font-size: 13px;
+	font-size: 18px;
 	margin: 0 0 5px;
 	line-height: 20px;
 	background: #f7f7f7;
@@ -1041,7 +1044,7 @@ input[type=file].tg-fileinput{display: none;}
 	width: 100%;
 	float: left;
 	color: #666;
-	font-size: 11px;
+	font-size: 15px;
 	line-height: 16px;
 }
 .tg-offerermessage .tg-description time{text-align: left;}
@@ -1056,7 +1059,7 @@ input[type=file].tg-fileinput{display: none;}
 	width: 16px;
 	height: 16px;
 	font-size: 11px;
-	line-height: 16px;
+	line-height: 18px;
 	content: '\f00c';
 	position: absolute;
 	font-family: 'FontAwesome';
@@ -1079,7 +1082,7 @@ input[type=file].tg-fileinput{display: none;}
 	resize: none;
 	padding: 8px;
 	height: 100px;
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 16px;
 	border-radius: 0;
 }
